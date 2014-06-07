@@ -14,3 +14,4 @@ gem 'spring',        group: :development
 
 # Added gems
 gem 'devise'
+
