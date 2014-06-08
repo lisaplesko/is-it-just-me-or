@@ -10,6 +10,7 @@ class CategoriesController < ApplicationController
   # GET /categories/1
   # GET /categories/1.json
   def show
+    @posts = Post.all.where(category_id: params[:id])
   end
 
   # GET /categories/new
