@@ -27,7 +27,7 @@ CATEGORIES = [
     'Science',
     'Education',
     'Fitness',
-    'Busines',
+    'Business',
     'Money',
     'Dogs',
     'University',
