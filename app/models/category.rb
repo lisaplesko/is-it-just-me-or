@@ -18,4 +18,8 @@ class Category < ActiveRecord::Base
       !Category.find(name: category_name).nil?
     end
 
+    def self.top_8
+      Category.all.sample(8)
+    end
+
 end

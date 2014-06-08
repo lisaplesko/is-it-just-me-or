@@ -3,7 +3,7 @@ class Post < ActiveRecord::Base
   belongs_to :user
   belongs_to :category
 
-  self.count_comments
+  def self.count_comments
     self.comments.count
   end
 
