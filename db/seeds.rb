@@ -5,3 +5,53 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+# Conveniently borrowed from http://www.bitrebels.com/social/most-popular-blog-categories-google/
+CATEGORIES = [
+    'Economics',
+    'Parenting',
+    'Career',
+    'Politics',
+    'Finance',
+    'Pets',
+    'Gaming',
+    'Nature',
+    'DIY',
+    'Celebrity Gossip',
+    'Wine',
+    'Medical',
+    'Social Media',
+    'Cats',
+    'Sports',
+    'Entertainment',
+    'Shopping',
+    'Science',
+    'Education',
+    'Fitness',
+    'Business',
+    'Money',
+    'Dogs',
+    'University',
+    'Lifestyle',
+    'Marketing',
+    'History',
+    'SEO',
+    'Technology',
+    'Green',
+    'Health',
+    'Law',
+    'Photography',
+    'Movie',
+    'Wedding',
+    'Food',
+    'Design',
+    'Travel',
+    'Beauty',
+    'Real Estate',
+    'Car',
+    'Fashion',
+    'Music'
+    ]
+
+CATEGORIES.each do |cat|
+  Category.create(name: cat)
+end

@@ -1,2 +1,8 @@
 <br>
 Home Index Page
+
+<% @top_8_categories.each do |cat| %>
+  <div class='top-8-box'>
+  <%= cat.name %>
+  </div>
+<% end %>
