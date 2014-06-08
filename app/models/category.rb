@@ -1,6 +1,6 @@
 class Category < ActiveRecord::Base
   # Conveniently borrowed from http://www.bitrebels.com/social/most-popular-blog-categories-google/
-  CATEGORIES = (
+  CATEGORIES = [
     'Economics',
     'Parenting',
     'Career',
@@ -44,7 +44,7 @@ class Category < ActiveRecord::Base
     'Car',
     'Fashion',
     'Music'
-    )
+    ]
 
   has_many :posts
 end
