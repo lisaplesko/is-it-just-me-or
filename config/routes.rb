@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
 
-  root 'home#index'
+  root 'posts#index'
+
+  devise_for :users, path_names: {sign_in: "login", sign_out: "logout"},
+                     controllers: {omniauth_callbacks: "omniauth_callbacks"}
+
+
   resources :categories
   resources :comments
   resources :posts
-  devise_for :users
+
 end
