@@ -8,11 +8,11 @@
   <%= @post.body %>
 </p>
 
-<%= @post.comments.first.user.email %>
+<%= @post.comments.first.user_email %>
 
 <ul>
   <% @post.comments.each do |comment| %>
-    <li><%= comment.body %>|<%= comment.user%></li>
+    <li><%= comment.body %>|<%= comment.user_email %></li>
   <% end %>
 </ul>
 
