@@ -20,9 +20,15 @@ var insertCategory = function(category){
   var category_html = template(category);
   return category_html;
 };
+var insertScrollBreak = function(category){
+  var scrollbreak_source = $('#scrollbreak-template').html();
+  var template = Handlebars.compile(scrollbreak_source);
+  var scrollbreak_html = template(category);
+  return scrollbreak_html;
+};
 
 var appendTop8 = function(categories){
-
+  var
 
 
 <% count = 2 %>
