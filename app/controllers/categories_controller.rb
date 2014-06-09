@@ -62,6 +62,11 @@ class CategoriesController < ApplicationController
     end
   end
 
+  def top8
+    @top8 = Category.top_8
+    render json: @top8
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_category
