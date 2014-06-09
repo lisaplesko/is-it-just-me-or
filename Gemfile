@@ -18,4 +18,5 @@ gem 'pry-nav', group: :development
 gem 'devise'
 gem 'dotenv-rails'
 gem 'omniauth-facebook'
+gem 'faker'
 
