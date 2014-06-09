@@ -1,36 +1,26 @@
-<h1>Listing posts</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="post_index.css">
+  </head>
+  <body>
+    <div class='container'>
+      <div class='header'>
+        <div class='background-image'></div>
+      </div>
+      <div class='profile-pic'>
+        <img style='height: 100%' src='profile_pic.jpg' />
+      </div>
+      <div id='blog-title'>
+        <h1 id='title'>Is It Just Me Or....</h1>
+      </div>
+      <% current_user.posts.each do |post| %>
+        <div class='post'>
+          <h3><%= post.title %></h3>
+        </div>
+      <% end %>
+    </div>
+  </body>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th>Author</th>
-      <th colspan="2"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= link_to post.title, post %></td>
-        <td><%= post.body %></td>
-
-
-        <!-- Commented out until bugfix
-        <td>< post.user.email ></td>
-        -->
-
-
-        <% if post.user == current_user %>
-          <td><%= link_to 'Edit', edit_post_path(post) %></td>
-          <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }%></td>
-        <% end %>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Post', new_post_path %>
+</html>
