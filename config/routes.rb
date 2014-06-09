@@ -8,6 +8,10 @@ Rails.application.routes.draw do
 
   resources :categories
 
+  resources :users do
+    resources :posts
+  end
+
   resources :posts do
     resources :comments
   end

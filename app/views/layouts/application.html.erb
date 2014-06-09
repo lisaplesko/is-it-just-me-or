@@ -5,6 +5,15 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
 </head>
 <body>
 
@@ -16,8 +25,9 @@
 
 <% if user_signed_in? %>
   Logged in as <strong><%= current_user.email %></strong>.
-  <%= link_to 'Edit profile', edit_user_registration_path %> |
-  <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+  <%= link_to 'Edit profile', edit_user_registration_path, class: "btn btn-default", role: "button" %>
+  <%= link_to "Logout", destroy_user_session_path, class: "btn btn-default", role: "button", method: :delete %>
+  <%= link_to "My Blog", user_posts_path(current_user), class: "btn btn-default", role: "button" %>
 <% else %>
   <%= link_to "Sign up", new_user_registration_path %> |
   <%= link_to "Login", new_user_session_path %>
