@@ -8,13 +8,11 @@
   <%= @post.body %>
 </p>
 
-<%= @post.comments.first.user_email %>
 
-<ul>
-  <% @post.comments.each do |comment| %>
-    <li><%= comment.body %>|<%= comment.user_email %></li>
-  <% end %>
-</ul>
+<% @post.comments.each do |comment| %>
+  <div><%= comment.body %> <b>posted by</b> <%= comment.user_email %></div>
+<% end %>
+
 
 <% if @post.user == current_user %>
   <%= link_to 'Edit', edit_post_path(@post) %> |
