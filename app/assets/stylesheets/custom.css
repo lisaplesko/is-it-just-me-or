@@ -1,0 +1,55 @@
+.title-input-field {
+  border: 0px;
+  background: transparent;
+  font-size: 45px;
+  font-family: "jaf-bernino-sans", sans-serif;
+  font-weight: bold;
+}
+
+[contenteditable=true]:focus,
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+[contenteditable=true]:empty:before{
+  content: attr(placeholder);
+  font-family: "jaf-bernino-sans", sans-serif;
+  color: gray;
+  font-style: italic;
+  font-size: 17px;
+}
+
+.post-body {
+  min-height: 100px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-family: "jaf-bernino-sans", sans-serif;
+  font-size: 17px;
+}
+
+.status {
+  min-height: 20px;
+  font-style: italic;
+  color: gray;
+}
+
+.outline-button {
+  border: 1px solid black;
+  background: rgba(255,255,255,0.5);
+  border-radius: 20px;
+  padding: 10px;
+}
+
+
+
+
+
+
+
+/* Resource for placeholder in editable div
+http://blogs.teamb.com/craigstuntz/2013/01/29/38734/
+*/
+

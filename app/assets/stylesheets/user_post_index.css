@@ -1,6 +1,6 @@
 body{
-  overflow: scroll;
-  height: 1000px;
+  /*overflow: scroll;*/
+  /*height: 1000px;*/
   margin: 0;
 }
 .container{
@@ -13,6 +13,7 @@ body{
 .header{
   position: absolute;
   position: relative;
+  min-height: 250px;
   width: 100%;
   height: 25%;
 }
