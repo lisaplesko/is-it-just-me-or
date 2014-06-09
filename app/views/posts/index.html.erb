@@ -15,8 +15,10 @@
       <tr>
         <td><%= link_to post.title, post %></td>
         <td><%= post.body %></td>
-        <td><%= post.user.email %></td>
 
+        <!-- Commented out until bugfix
+        <td>< post.user.email ></td>
+        -->
 
 
         <% if post.user == current_user %>
