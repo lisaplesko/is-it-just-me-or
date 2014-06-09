@@ -15,33 +15,24 @@ $(document).ready(function(){
 });
 
 var insertCategory = function(){
-
+<section id="scrollback" data-type="background" data-speed="10">
+  <article><blockquote class='blockquote'>
+      Title: <%= link_to post.title, post_path(post) %> - <%= post.view_counter %>
+      <ul class='list-unstyled'>First Sentence: <%= post.body %></ul>
+      <footer><%= link_to 'Post Author', posts_path(post.user) %></footer>
+      </blockquote>
+  </article>
+  </section>
 
 };
 
 var insertBreak = function(){
-
+<section id="scroll2" data-type="background" data-speed="10">
+  <article>Simple Parallax Scroll</article>
+  </section>
 };
 
-
-<section id="scrollback" data-type="background" data-speed="10">
-  <article>Simple Parallax Scroll</article>
-  </section>
-
-  <section id="scroll2" data-type="background" data-speed="10">
-  <article>Simple Parallax Scroll</article>
-  </section>
-
-  <section id="scroll3" data-type="background" data-speed="10">
-  <article>Simple Parallax Scroll</article>
-  </section>
-
-  <section id="scroll4" data-type="background" data-speed="10">
-  <article>Simple Parallax Scroll</article>
-  </section>
-
-  <h2>Is it just me or...</h2>
-<div class='.container'>
+var formatTop8 = function(){
 <% count = 2 %>
 <% @top_8_categories.each do |cat| %>
   <!-- Make a new div row for every two categories -->
@@ -56,11 +47,7 @@ var insertBreak = function(){
   </div>
     <% post_counter = 0 %>
     <% cat.posts.each do |post| %>
-      <blockquote class='blockquote'>
-      Title: <%= link_to post.title, post_path(post) %> - <%= post.view_counter %>
-      <ul class='list-unstyled'>First Sentence: <%= post.body %></ul>
-      <footer><%= link_to 'Post Author', posts_path(post.user) %></footer>
-      </blockquote>
+
 
 
     <% end %>
@@ -71,5 +58,8 @@ var insertBreak = function(){
   <% end %>
   <% count += 1 %>
 <% end %>
-</div>
+
+};
+
+
 
