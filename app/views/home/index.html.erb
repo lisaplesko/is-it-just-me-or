@@ -1,7 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
+  <title>Is it just me or...?</title>
+  <!--script src="/assets/javascripts/handlebars.hbs.erb" type="text/x-handlebars-template" charset="utf-8" id="category-template"></script-->
+  <script id="category-template" type="text/x-handlebars-template">
+  {{#each top8_categories}}
+    <section class="scrollbreak" id='{{this.name}}' data-type="background" data-speed="10">
+      <article>{{this.name}}</article>
+    </section>
+
+    for(i = 0; i < {{this.posts.count}}; i++){
+      <section class="scrollback" id='{{this.post.id}}' data-type="background" data-speed="10">
+      <article><blockquote class='blockquote'>
+      {{this.posts.title}} - {{this.post.view_counter}}
+      <ul class='list-unstyled'>{{this.post.body}}</ul>
+      <footer>Post Author</footer>
+      </blockquote>
+      </article>
+      </section>
+    };
+  {{/each}}
+</script>
 </head>
 <body>
 <div class='.container'>

@@ -1,4 +1,4 @@
-#scrollback {
+.scrollback {
   background: url(http://www.jodihelmer.com/wordpress/wp-content/uploads/2014/01/desk-and-typewriter.jpg) 50% 0 repeat fixed; min-height: 1000px;
   height: 1000px;
   margin: 0 auto;
@@ -7,7 +7,7 @@
   position: relative;
 }
 
-#scrollback article {
+.scrollback article {
   height: 458px;
   position: absolute;
   text-align: center;
@@ -15,7 +15,7 @@
   width: 100%;
 }
 
-#scrollbreak {
+.scrollbreak {
   background: url(http://petenowak2000.files.wordpress.com/2014/04/typewriter.jpg) 50% 0 repeat fixed; min-height: 200px;
   height: 500px;
   margin: 0 auto;
@@ -26,7 +26,7 @@
   box-shadow: 0 0 50px rgba(0,0,0,0.8);
 }
 
-#scrollbreak article {
+.scrollbreak article {
   height: 458px;
   position: absolute;
   text-align: center;
