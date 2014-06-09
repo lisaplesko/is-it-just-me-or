@@ -1,46 +1,56 @@
 $(document).ready(function(){
-    $('section[data-type="background"]').each(function(){
-        var $bgobj = $(this); // assigning the object
 
-        $(window).scroll(function() {
-            var yPos = -($window.scrollTop() / $bgobj.data('speed'));
+ var $window = $(window);
 
-            // Put together our final background position
-            var coords = '50% '+ yPos + 'px';
-
-            // Move the background
-            $bgobj.css({ backgroundPosition: coords });
-        });
+  $('section[data-type="background"]').each(function(){
+    var $bgobj = $(this); // assigning the object
+    $(window).scroll(function() {
+      var yPos = -($window.scrollTop() / $bgobj.data('speed'));
+      // Put together our final background position
+      var coords = '50% '+ yPos + 'px';
+      // Move the background
+      $bgobj.css({ backgroundPosition: coords });
     });
-});
-
-var insertCategory = function(category){
-  var category_source = $('#category-template').html();
-  var template = Handlebars.compile(category_source);
-  var category_html = template(category);
-  return category_html;
-};
-var insertScrollBreak = function(category){
-  var scrollbreak_source = $('#scrollbreak-template').html();
-  var template = Handlebars.compile(scrollbreak_source);
-  var scrollbreak_html = template(category);
-  return scrollbreak_html;
-};
-
-var appendTop8 = function(categories){
-  var count = 2;
-
-  for(i = 0; i < categories.length; i++){
-    insertScrollBreak(categories[i]);
-    insertCategory(categories[i]);
-
-  }
-};
-
+  });
 $.ajax({
   url: '/categories/top8'
 })
   .done(appendTop8);
+});
+
+var insertCategorySection = function(category, count){
+  $('#scroll-section').append(generateNewSection(count));
+  for(var i = 0; i < category.posts.count; i++){
+    $('#scroll-section').append(generatePostHTML(category.posts[i]));
+  }
+  $('#scroll-section').append('</section>');
+};
+
+var generateNewSection = function(count){
+  var newSectionHTML = "<section class='scrollback' id='scroll" + count + "' data-type='background' data-speed='10'>";
+  return newSectionHTML;
+};
+
+var generatePostHTML = function(post){
+  var postSource = $('#post-template').html();
+  var template = Handlebars.compile(postsSource);
+  var postHTML = template(post);
+  return postHTML;
+};
+
+var insertScrollBreakSection = function(category){
+  var scrollbreak_source = $('#scrollbreak-template').html();
+  var template = Handlebars.compile(scrollbreak_source);
+  var scrollbreak_html = template(category);
+  $('#scroll-section').append(scrollbreak_html);
+};
+
+var appendTop8 = function(categories){
+  for(i = 0; i < categories.length; i++){
+    insertCategorySection(categories[i], i);
+    insertScrollBreakSection(categories[i]);
+  }
+};
 
 
 

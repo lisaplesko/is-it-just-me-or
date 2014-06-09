@@ -63,8 +63,8 @@ class CategoriesController < ApplicationController
   end
 
   def top8
-    @top8 = Category.top_8
-    render json: @top8
+    @top8 = Category.includes(:posts).top_8
+    render json: @top8.to_json(include: :posts)
   end
 
   private

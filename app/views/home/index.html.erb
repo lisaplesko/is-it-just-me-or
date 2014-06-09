@@ -3,22 +3,19 @@
 <head>
   <title>Is it just me or...?</title>
   <!--script src="/assets/javascripts/handlebars.hbs.erb" type="text/x-handlebars-template" charset="utf-8" id="category-template"></script-->
-  <script id="category-template" type="text/x-handlebars-template">
-    <section class="scrollback" id='{{this.post.id}}' data-type="background" data-speed="10">
-      for(i = 0; i < {{this.posts.count}}; i++){
+  <script id="post-template" type="text/x-handlebars-template">
+      <div>
         <article><blockquote class='blockquote'>
-        {{this.posts.title}} - {{this.post.view_counter}}
-        <ul class='list-unstyled'>{{this.post.body}}</ul>
+        {{this.title}} - {{this.view_counter}}
+        <ul class='list-unstyled'>{{this.body}}</ul>
         <footer>Post Author</footer>
         </blockquote>
         </article>
-      };
-    </section>
+      </div>
   </script>
   <script id='scrollbreak-template' type="text/x-handlebars-template">
     <section class="scrollbreak" id='{{this.name}}' data-type="background" data-speed="10">
-      <article>{{this.name}}</article>
-    </section>
+      {{this.name}}
   </script>
 </head>
 <body>

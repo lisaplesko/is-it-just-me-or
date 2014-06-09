@@ -1,10 +1,11 @@
 .scrollback {
-  background: url(http://www.jodihelmer.com/wordpress/wp-content/uploads/2014/01/desk-and-typewriter.jpg) 50% 0 repeat fixed; min-height: 1000px;
-  height: 1000px;
+  height: 800px;
   margin: 0 auto;
   width: 100%;
   max-width: 1920px;
   position: relative;
+  text-align: center;
+  vertical-align: center;
 }
 
 .scrollback article {
@@ -16,14 +17,18 @@
 }
 
 .scrollbreak {
-  background: url(http://petenowak2000.files.wordpress.com/2014/04/typewriter.jpg) 50% 0 repeat fixed; min-height: 200px;
-  height: 500px;
-  margin: 0 auto;
+  background: url(http://petenowak2000.files.wordpress.com/2014/04/typewriter.jpg) 50% 0 repeat fixed; min-height: 75px;
+  /*http://petenowak2000.files.wordpress.com/2014/04/typewriter.jpg*/
+  height: 75px;
   width: 100%;
   max-width: 1920px;
   position: relative;
   -webkit-box-shadow: 0 0 50px rgba(0,0,0,0.8);
   box-shadow: 0 0 50px rgba(0,0,0,0.8);
+  color: white;
+  text-align: center;
+  vertical-align: inherit;
+  font-size: 35px;
 }
 
 .scrollbreak article {
@@ -34,41 +39,17 @@
   width: 100%;
 }
 
+#scroll0 {
+  background: url(http://www.jodihelmer.com/wordpress/wp-content/uploads/2014/01/desk-and-typewriter.jpg) 50% 0 repeat fixed; min-height: 800px;
+}
+
+#scroll1 {
+  background: url(http://unsplash.s3.amazonaws.com/IMG_5776.jpg) 50% 0 repeat fixed; min-height: 800px;
+}
+
+#scroll2 {
+  background: url(http://www.mcwriters.com/wp-content/uploads/2008/05/tims-desktop-image1.jpg) 50% 0 repeat fixed; min-height: 800px;
+}
+
 #scroll3 {
-  background: url(http://unsplash.s3.amazonaws.com/IMG_5776.jpg) 50% 0 repeat fixed; min-height: 500px;
-  height: 450px;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1920px;
-  position: relative;
-  -webkit-box-shadow: 0 0 50px rgba(0,0,0,0.8);
-  box-shadow: 0 0 50px rgba(0,0,0,0.8);
-}
-
-#scroll3 article {
-  height: 458px;
-  position: absolute;
-  text-align: center;
-  top: 150px;
-  width: 100%;
-}
-
-#scroll4 {
-  background: url(http://www.mcwriters.com/wp-content/uploads/2008/05/tims-desktop-image1.jpg
-) 50% 0 repeat fixed; min-height: 1000px;
-  height: 1000px;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1920px;
-  position: relative;
-  -webkit-box-shadow: 0 0 50px rgba(0,0,0,0.8);
-  box-shadow: 0 0 50px rgba(0,0,0,0.8);
-}
-
-#scroll4 article {
-  height: 458px;
-  position: absolute;
-  text-align: center;
-  top: 150px;
-  width: 100%;
 }
