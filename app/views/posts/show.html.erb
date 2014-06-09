@@ -16,7 +16,8 @@
     <%= link_to 'Edit', edit_post_path(@post) %> |
   <% end %>
 
-  <%= link_to 'Back', posts_path %>
-
   <%= render 'comments/form' %>
+  <br>
+  <%= link_to 'Back', posts_path, class: "btn btn-default", role: "button"  %>
+
 </div>
