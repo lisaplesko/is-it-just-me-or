@@ -8,16 +8,19 @@
   <% end %>
 
   <div class='col-md-6'>
-  <div class='panel panel-primary'>
+  <div class='panel panel-default'>
   <div class='panel-heading'>
     <h3 class='panel-title'><%= cat.name %></h3>
   </div>
+    <% post_counter = 0 %>
     <% cat.posts.each do |post| %>
       <blockquote class='blockquote'>
       Title: <%= link_to post.title, post_path(post) %> - <%= post.view_counter %>
       <ul class='list-unstyled'>First Sentence: <%= post.body %></ul>
-        <footer><%= link_to 'Post Author', posts_path(post.user) %></footer>
-        </blockquote>
+      <footer><%= link_to 'Post Author', posts_path(post.user) %></footer>
+      </blockquote>
+
+
     <% end %>
   </div>
   </div>
