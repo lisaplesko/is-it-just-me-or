@@ -19,11 +19,10 @@ $.ajax({
 });
 
 var insertCategorySection = function(category, count){
-  $('#scroll-section').append(generateNewSection(count));
-  for(var i = 0; i < category.posts.count; i++){
-    $('#scroll-section').append(generatePostHTML(category.posts[i]));
+  $('#scroll-section').append("<section class='scrollback' id='scroll" + count + "' data-type='background' data-speed='10'>");
+  for(var i = 0; i < category.posts.length; i++){
+    $('#scroll' + count).append(generatePostHTML(category.posts[i]));
   }
-  $('#scroll-section').append('</section>');
 };
 
 var generateNewSection = function(count){
@@ -33,7 +32,7 @@ var generateNewSection = function(count){
 
 var generatePostHTML = function(post){
   var postSource = $('#post-template').html();
-  var template = Handlebars.compile(postsSource);
+  var template = Handlebars.compile(postSource);
   var postHTML = template(post);
   return postHTML;
 };
@@ -47,8 +46,8 @@ var insertScrollBreakSection = function(category){
 
 var appendTop8 = function(categories){
   for(i = 0; i < categories.length; i++){
-    insertCategorySection(categories[i], i);
     insertScrollBreakSection(categories[i]);
+    insertCategorySection(categories[i], i);
   }
 };
 
