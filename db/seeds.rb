@@ -6,6 +6,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 # Conveniently borrowed from http://www.bitrebels.com/social/most-popular-blog-categories-google/
+Category.delete_all
+Post.delete_all
+
 CATEGORIES = [
     'Economics',
     'Parenting',
@@ -54,4 +57,14 @@ CATEGORIES = [
 
 CATEGORIES.each do |cat|
   Category.create(name: cat)
+end
+
+
+
+# Faker data for posts
+150.times do |post|
+    title = Faker::Lorem.sentence
+    body = Faker::Lorem.sentence
+    new_post = Post.create(title: title, body: body)
+    Category.all.sample.posts << new_post
 end
