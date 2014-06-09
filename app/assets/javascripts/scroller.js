@@ -14,25 +14,17 @@ $(document).ready(function(){
     });
 });
 
-var insertCategory = function(){
-<section id="scrollback" data-type="background" data-speed="10">
-  <article><blockquote class='blockquote'>
-      Title: <%= link_to post.title, post_path(post) %> - <%= post.view_counter %>
-      <ul class='list-unstyled'>First Sentence: <%= post.body %></ul>
-      <footer><%= link_to 'Post Author', posts_path(post.user) %></footer>
-      </blockquote>
-  </article>
-  </section>
-
+var insertCategory = function(category){
+  var category_source = $('#category-template').html();
+  var template = Handlebars.compile(category_source);
+  var category_html = template(category);
+  return category_html;
 };
 
-var insertBreak = function(){
-<section id="scroll2" data-type="background" data-speed="10">
-  <article>Simple Parallax Scroll</article>
-  </section>
-};
+var appendTop8 = function(categories){
 
-var formatTop8 = function(){
+
+
 <% count = 2 %>
 <% @top_8_categories.each do |cat| %>
   <!-- Make a new div row for every two categories -->
@@ -60,6 +52,11 @@ var formatTop8 = function(){
 <% end %>
 
 };
+
+$.ajax({
+  url: '/categories/top8'
+})
+  .done(appendTop8);
 
 
 
