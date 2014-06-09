@@ -59,6 +59,12 @@ CATEGORIES.each do |cat|
   Category.create(name: cat)
 end
 
+5.times do |user|
+    email = Faker::Internet.email
+    password = Faker::Lorem.characters(8)
+    username = Faker::Internet.user_name
+    new_user = User.create( email: email, password: password, username: username)
+end
 
 
 # Faker data for posts
