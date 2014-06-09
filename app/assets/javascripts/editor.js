@@ -12,8 +12,6 @@ var editor = new MediumEditor('.editable', {
     // delay: 1000,
     // targetBlank: true
 
-
-
 // var timerId = setTimeout(func|code, delay)
 
 // $("#my-form").bind('keyup paste', function(e) {
@@ -45,35 +43,16 @@ $('.title-input-field, .editable').keyup(function(){
 //user is "finished typing," do something
 function doneTyping () {
     $('.status').html('Saved.');
+    save_to_form();
+}
+
+function save_to_form() {
+  var content = $('#editor').html();
+  $("input[type=hidden").val(content); // drop it into a hidden input field
+  $("#new_post").submit();
 }
 
 
-
-
-// var time_remaining = setTimeout( (function() {
-//     $('.new-post-form').submit();}) , 3000);
-
-// var time_remaining = function() {
-
-//   $('.new-post-form').submit(); , 3000);
-
-// };
-
-
-
-// $('.editable, .title-input-field').on('keyup', function() {
-//   // as soon as key lifts, restart timeout
-//   time_remaining();
-
-//   // clearTimeout(time_remaining);
-//   save_to_form();
-
-//   $('.status').html('Saving...');
-
-//   // Trigger the submit button when the timer runs out -> move from new TO EDIT (update controller)
-
-
-// });
 
 // // once it switches to edit page, use edit identifier...
 
