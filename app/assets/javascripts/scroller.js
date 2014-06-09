@@ -28,35 +28,13 @@ var insertScrollBreak = function(category){
 };
 
 var appendTop8 = function(categories){
-  var
+  var count = 2;
 
+  for(i = 0; i < categories.length; i++){
+    insertScrollBreak(categories[i]);
+    insertCategory(categories[i]);
 
-<% count = 2 %>
-<% @top_8_categories.each do |cat| %>
-  <!-- Make a new div row for every two categories -->
-  <% if count % 2 == 0 %>
-    <div class='.row'>
-  <% end %>
-
-  <div class='col-md-6'>
-  <div class='panel panel-default'>
-  <div class='panel-heading'>
-    <h3 class='panel-title'><%= cat.name %></h3>
-  </div>
-    <% post_counter = 0 %>
-    <% cat.posts.each do |post| %>
-
-
-
-    <% end %>
-  </div>
-  </div>
-  <% if count % 2 == 0 %>
-  </div>
-  <% end %>
-  <% count += 1 %>
-<% end %>
-
+  }
 };
 
 $.ajax({
