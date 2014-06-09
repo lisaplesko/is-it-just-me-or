@@ -1,23 +1,22 @@
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+<div class="container">
+<%= render 'photo_header' %>
+  <div class="status"></div>
+  <div class="title-input-field">
+    <%= @post.title %>
+  </div>
+  <div class="post-body">
+    <%= @post.body.html_safe %>
+  </div>
 
-<p>
-  <strong>Body:</strong>
-  <%= @post.body %>
-</p>
+  <% @post.comments.each do |comment| %>
+    <div><%= comment.body %> <b>posted by</b> <%= comment.user_email %></div>
+  <% end %>
 
+  <% if @post.user == current_user %>
+    <%= link_to 'Edit', edit_post_path(@post) %> |
+  <% end %>
 
-<% @post.comments.each do |comment| %>
-  <div><%= comment.body %> <b>posted by</b> <%= comment.user_email %></div>
-<% end %>
+  <%= link_to 'Back', posts_path %>
 
-
-<% if @post.user == current_user %>
-  <%= link_to 'Edit', edit_post_path(@post) %> |
-<% end %>
-
-<%= link_to 'Back', posts_path %>
-
-<%= render 'comments/form' %>
+  <%= render 'comments/form' %>
+</div>

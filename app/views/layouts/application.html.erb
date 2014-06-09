@@ -2,34 +2,35 @@
 <html>
 <head>
   <title>Wdi8Blogapp</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all'  %>
+  <%= javascript_include_tag 'application'  %>
   <%= csrf_meta_tags %>
   <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+<script type="text/javascript" src="//use.typekit.net/yqt5rux.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 
 </head>
-<body>
+  <body>
 
-<% flash.each do |name, msg| %>
-  <% if msg.is_a?(String) %>
-    <%= content_tag :div, msg, :class => "flash_#{name}" %>
-  <% end %>
-<% end %>
+    <% flash.each do |name, msg| %>
+      <% if msg.is_a?(String) %>
+        <%= content_tag :div, msg, :class => "flash_#{name}" %>
+      <% end %>
+    <% end %>
 
-<% if user_signed_in? %>
-  Logged in as <strong><%= current_user.username %></strong>.
-  <%= link_to 'Edit profile', edit_user_registration_path, class: "btn btn-default", role: "button" %>
-  <%= link_to "Logout", destroy_user_session_path, class: "btn btn-default", role: "button", method: :delete %>
-  <%= link_to "My Blog", user_posts_path(current_user), class: "btn btn-default", role: "button" %>
-<% else %>
-  <%= link_to "Sign up", new_user_registration_path %> |
-  <%= link_to "Login", new_user_session_path %>
-  <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
-<% end %>
+    <% if user_signed_in? %>
+      Logged in as <strong><%= current_user.username %></strong>.
+      <%= link_to 'Edit profile', edit_user_registration_path, class: "btn btn-default", role: "button" %>
+      <%= link_to "Logout", destroy_user_session_path, class: "btn btn-default", role: "button", method: :delete %>
+      <%= link_to "My Blog", user_posts_path(current_user), class: "btn btn-default", role: "button" %>
+    <% else %>
+      <%= link_to "Sign up", new_user_registration_path %> |
+      <%= link_to "Login", new_user_session_path %>
+      <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+    <% end %>
 
-<%= yield %>
-
-</body>
+    <%= yield %>
+  </body>
 </html>
