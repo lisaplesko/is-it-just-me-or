@@ -22,4 +22,9 @@ class Category < ActiveRecord::Base
       Category.all.sample(8)
     end
 
+    def rank_post
+      # Algorithm code for ranking posts
+      # view_count + comments + (comments/view_count * modifier)
+    end
+
 end
