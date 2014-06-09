@@ -1,0 +1,38 @@
+.title-input-field {
+  border: 0px;
+  background: transparent;
+  font-size: 45px;
+  font-family: "jaf-facitweb", sans-serif;
+  font-weight: 600;
+}
+
+[contenteditable=true]:focus,
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+[contenteditable=true]:empty:before{
+  content: attr(placeholder);
+  font-family: "jaf-facitweb",sans-serif;
+  color: gray;
+  font-size: 15px;
+}
+
+.post-body {
+  min-height: 150px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+
+
+
+
+
+/* Resource for placeholder in editable div
+http://blogs.teamb.com/craigstuntz/2013/01/29/38734/
+*/
+
