@@ -2,8 +2,8 @@
   border: 0px;
   background: transparent;
   font-size: 45px;
-  font-family: "jaf-facitweb", sans-serif;
-  font-weight: 600;
+  font-family: "jaf-bernino-sans", sans-serif;
+  font-weight: bold;
 }
 
 [contenteditable=true]:focus,
@@ -16,15 +16,18 @@ button:focus {
 
 [contenteditable=true]:empty:before{
   content: attr(placeholder);
-  font-family: "jaf-facitweb",sans-serif;
+  font-family: "jaf-bernino-sans", sans-serif;
   color: gray;
-  font-size: 15px;
+  font-style: italic;
+  font-size: 17px;
 }
 
 .post-body {
   min-height: 150px;
   margin-top: 15px;
   margin-bottom: 15px;
+  font-family: "jaf-bernino-sans", sans-serif;
+  font-size: 17px;
 }
 
 
