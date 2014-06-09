@@ -32,8 +32,8 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        format.html { render :edit }
-        format.json { render :edit }
+        format.html { redirect_to edit_post_path(@post) }
+        format.js { redirect_to edit_post_path(@post) }
         # format.json { render :show, status: :created, location: @post }
       else
         format.html { render :new }
@@ -45,9 +45,11 @@ class PostsController < ApplicationController
   # PATCH/PUT /posts/1
   # PATCH/PUT /posts/1.json
   def update
+    @post = Post.find(params[:id])
     respond_to do |format|
-      if current_user.posts.update(post_params)
-        format.html { redirect_to @post, notice: 'Post was successfully updated.' }
+      if @post.update_attributes(post_params)
+        # current_user.posts.update(post_params)
+        format.html { redirect_to @post, notice: 'Post was successfully published.' }
         format.json { render :show, status: :ok, location: @post }
       else
         format.html { render :edit }

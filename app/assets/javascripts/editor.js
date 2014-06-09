@@ -36,9 +36,19 @@ $(document).ready(function(){
 
   function save_to_form() {
     var content = $('#editor').html();
-    $("post[body]").val(content); // drop it into a hidden input field
+    $("#post_body").val(content); // drop it into a hidden input field
     $("#new_post").submit();
   }
+
+
+  // Get updates
+  $("#edit_post").on('submit', function() {
+    preventDefault();
+    alert('Testing!');
+    var content = $('#editor').html();
+    $("#post_body").val(content); // drop it into a hidden input field
+    $("#edit_post").submit();
+  });
 
 
 
