@@ -30,6 +30,12 @@ button:focus {
   font-size: 17px;
 }
 
+.status {
+  min-height: 20px;
+  font-style: italic;
+  color: gray;
+}
+
 
 
 

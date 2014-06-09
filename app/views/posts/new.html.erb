@@ -1,6 +1,8 @@
 <br>
 <br>
 
+
+
 <div class="container">
   <div class="status"></div>
     <div class="row"></div>
@@ -8,14 +10,14 @@
 
   <div class="row" id="post">
     <div class="row">
-      <div class="post-form">
+      <div class="new-post-form">
         <%= form_for(@post) do |f| %>
           <%= f.text_field :title,
                             input_html: {class: ""},
                             placeholder: "title", class: "title-input-field" %>
           <%= f.hidden_field :body %>
 
-          <div class="post-body editable" id="editor" contentEditable='true' placeholder="is it just me or..."></div>
+          <div class="post-body editable" id="editor" contentEditable='true'></div>
 
           <%= f.submit %>
         <% end %>
