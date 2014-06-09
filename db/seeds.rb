@@ -62,7 +62,7 @@ end
 # Faker data for users
 5.times do |user|
     email = Faker::Internet.email
-    password = Faker::Lorem.characters(8)
+    password = "password"
     username = Faker::Internet.user_name
     new_user = User.create( email: email, password: password, username: username)
 end
