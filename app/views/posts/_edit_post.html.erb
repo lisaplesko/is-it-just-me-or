@@ -1,20 +1,26 @@
 <div class="container">
   <%= render 'photo_header' %>
-  <div class="status"></div>
-  <div id="new-post-form">
-    <%= form_for(@post) do |f| %>
-      <%= f.text_field :title,
-                        placeholder: "title", class: "title-input-field" %>
-      <%= f.hidden_field :body %>
 
-      <div class="post-body editable" id="editor" contentEditable='true' data-placeholder='Is it just me, or...'>
-        <% unless @post.body.nil? %>
-          <%= @post.body.html_safe %>
-        <% end %>
-      </div>
+  <div class="post-container" >
 
-      <%= f.submit 'Publish', class: "outline-button" %>
-    <% end %>
+    <div class="status"></div>
+    <div id="new-post-form">
+      <%= form_for(@post) do |f| %>
+        <%= f.text_field :title,
+                          placeholder: "title", class: "title-input-field" %>
+        <%= f.hidden_field :body %>
+
+        <div class="post-body editable" id="editor" contentEditable='true' data-placeholder='Is it just me, or...'>
+          <% unless @post.body.nil? %>
+            <%= @post.body.html_safe %>
+          <% end %>
+        </div>
+
+        <%= f.submit 'Publish', class: "outline-button" %>
+      <% end %>
+
+    </div>
 
   </div>
+
 </div>

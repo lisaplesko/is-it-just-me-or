@@ -1,19 +1,23 @@
 <div class="container">
   <%= render 'photo_header' %>
-  <div class="status"></div>
-  <div id="new-post-form">
-    <%= form_for(@post) do |f| %>
-      <%= f.text_field :title,
-                        input_html: {class: ""},
-                        placeholder: "title", class: "title-input-field" %>
-      <%= f.hidden_field :body %>
 
-      <div class="post-body editable" id="editor" contentEditable='true' data-placeholder='Is it just me, or...'></div>
+  <div class="post-container" >
+    <div class="status"></div>
+    <div id="new-post-form">
+      <%= form_for(@post) do |f| %>
+        <%= f.text_field :title,
+                          input_html: {class: ""},
+                          placeholder: "title", class: "title-input-field" %>
+        <%= f.hidden_field :body %>
 
-      <%= f.submit 'Create new post', class: "outline-button" %>
-    <% end %>
+        <div class="post-body editable" id="editor" contentEditable='true' data-placeholder='Is it just me, or...'></div>
 
+        <%= f.submit 'Create new post', class: "outline-button" %>
+      <% end %>
+
+    </div>
   </div>
+
 </div>
 
 
