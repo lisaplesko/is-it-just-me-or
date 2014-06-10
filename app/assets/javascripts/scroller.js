@@ -16,18 +16,19 @@ $(document).ready(function(){
   //   });
   // });
 
-// // Working
-// $.ajax({
-//   url: '/categories/top8'
-// })
-//   .done(appendTop8);
-// });
-
+// Working
 $.ajax({
   url: '/categories/top8'
 })
-  .done(displayOne);
+  .done(appendTop8);
 });
+
+// Experimental
+// $.ajax({
+//   url: '/categories/top8'
+// })
+//   .done(displayOne);
+// });
 
 var displayOne = function(categories){
   insertScrollBreakSection(categories[0]);
@@ -54,6 +55,7 @@ var insertCategorySection = function(category, count){
   $('#scroll-section').append("<section class='scrollback' id='scroll" + count + "' data-type='background' data-speed='10'>");
   for(var i = 0; i < category.posts.length; i++){
     $('#scroll' + count).append(generatePostHTML(category.posts[i]));
+    $('#scroll').append("<div class='.row'><div class='span12'><hr></div></div>");
   }
 };
 

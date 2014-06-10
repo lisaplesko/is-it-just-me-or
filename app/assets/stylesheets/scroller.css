@@ -34,12 +34,35 @@
   font-size: 35px;
 }
 
+.single-post {
+  margin: -20px 0 0 0;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #000;
+  margin: 1em 0;
+  padding: 0;
+  border-color: black;
+  background-color: black;
+  color: black;
+}
+
+.container hr {
+margin: 2px 0;
+}
+
 blockquote {
-  background: #f9f9f9;
+  background: none repeat scroll 0 0 #EFEFEF;
   border-left: 10px solid #ccc;
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
+  position: relative;
   quotes: "\201C""\201D""\2018""\2019";
+  margin-left: 25px;
+  padding: 10px 15px 2px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 blockquote:before {
   color: #ccc;
