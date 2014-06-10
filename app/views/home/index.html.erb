@@ -1,32 +1,32 @@
-<h2>Is it just me or...</h2>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Is it just me or...?</title>
+  <!--script src="/assets/javascripts/handlebars.hbs.erb" type="text/x-handlebars-template" charset="utf-8" id="category-template"></script-->
+  <script id="post-template" type="text/x-handlebars-template">
+      <div>
+        <article><blockquote class='blockquote'>
+        {{this.title}} - {{this.view_counter}}
+        <ul class='list-unstyled'>{{this.body}}</ul>
+        <footer>Post Author</footer>
+        </blockquote>
+        </article>
+      </div>
+  </script>
+  <script id='scrollbreak-template' type="text/x-handlebars-template">
+    <section class="scrollbreak" id='{{this.name}}' data-type="background" data-speed="10">
+      {{this.name}}
+    </section>
+  </script>
+</head>
+<body>
 <div class='.container'>
-<% count = 2 %>
-<% @top_8_categories.each do |cat| %>
-  <!-- Make a new div row for every two categories -->
-  <% if count % 2 == 0 %>
-    <div class='.row'>
-  <% end %>
 
-  <div class='col-md-6'>
-  <div class='panel panel-default'>
-  <div class='panel-heading'>
-    <h3 class='panel-title'><%= cat.name %></h3>
+  <div id='scroll-section'>
   </div>
-    <% post_counter = 0 %>
-    <% cat.posts.each do |post| %>
-      <blockquote class='blockquote'>
-      Title: <%= link_to post.title, post_path(post) %> - <%= post.view_counter %>
-      <ul class='list-unstyled'>First Sentence: <%= post.body %></ul>
-      <footer><%= link_to 'Post Author', posts_path(post.user) %></footer>
-      </blockquote>
 
-
-    <% end %>
-  </div>
-  </div>
-  <% if count % 2 == 0 %>
-  </div>
-  <% end %>
-  <% count += 1 %>
-<% end %>
 </div>
+
+</body>
+</html>
+
