@@ -1,7 +1,14 @@
 #scroll-section {
   top: 100px;
   position: float;
-  background: url(http://www.jodihelmer.com/wordpress/wp-content/uploads/2014/01/desk-and-typewriter.jpg) 50% 0 repeat fixed;
+  background: url(http://www.slashgear.com/wp-content/uploads/2008/11/datamancer_ergo_keyboard_4.jpg) 50% 0 repeat fixed;
+  /*http://www.jodihelmer.com/wordpress/wp-content/uploads/2014/01/desk-and-typewriter.jpg*/
+  /*http://petenowak2000.files.wordpress.com/2014/04/typewriter.jpg*/
+  /*http://dogknobit.com/wp-content/uploads/2014/03/holli-typejunkie.jpg*/
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   min-height: 100%;
   height: auto !important;
   height: 100%;
@@ -9,21 +16,23 @@
 }
 
 .scrollback {
-  background: url(http://www.jodihelmer.com/wordpress/wp-content/uploads/2014/01/desk-and-typewriter.jpg) 50% 0 repeat fixed;
-  /*background-color: white;*/
+  background: url(http://www.slashgear.com/wp-content/uploads/2008/11/datamancer_ergo_keyboard_4.jpg) 50% 0 repeat fixed;
   height: auto;
   margin: 0 auto;
-  width: 60%;
+  width: 75%;
   max-width: 1920px;
   position: relative;
   text-align: center;
 }
 
+.scrollbreak span {
+    background-color: black;
+}
+
 .scrollbreak {
-  background: url(http://petenowak2000.files.wordpress.com/2014/04/typewriter.jpg) 50% 0 repeat fixed; min-height: 75px;
-  /*http://petenowak2000.files.wordpress.com/2014/04/typewriter.jpg*/
+  background: url(http://dogknobit.com/wp-content/uploads/2014/03/holli-typejunkie.jpg) 50% 0 repeat fixed; min-height: 75px;
   height: 75px;
-  width: 60%;
+  width: 75%;
   margin: 0 auto;
   max-width: 1920px;
   position: relative;
