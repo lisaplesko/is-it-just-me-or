@@ -1,6 +1,11 @@
 #scroll-section {
-  background: url(http://www.jodihelmer.com/wordpress/wp-content/uploads/2014/01/desk-and-typewriter.jpg) 50% 0 repeat fixed; min-height: 800px;
-
+  top: 100px;
+  position: float;
+  background: url(http://www.jodihelmer.com/wordpress/wp-content/uploads/2014/01/desk-and-typewriter.jpg) 50% 0 repeat fixed;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin-bottom: -4em;
 }
 
 .scrollback {

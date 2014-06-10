@@ -37,12 +37,16 @@ var displayOne = function(categories){
 var updateText = function(event){
   // The text on the page should stay put in center
   // this means it must scroll down for each scroll down
+  event.preventDefault();
 
-  $(window).height();   // returns height of browser viewport
-  $(document).height(); // returns height of HTML document
-  $(window).scrollTop() // return the number of pixels scrolled vertically
+  var calcTop = function(){
+    var windowHeight = $(window).height();   // returns height of browser viewport
+    var documentHeight = $(document).height(); // returns height of HTML document
+    var scrollTop = $(window).scrollTop(); // return the number of pixels scrolled vertically
+    return windowHeight - scrollTop;
+  };
 
-
+  $('#scroll-section').css('top', calcTop);
 
 };
 
