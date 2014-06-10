@@ -7,9 +7,6 @@ class PostsController < ApplicationController
   def index
     @posts = current_user.posts.all
     # @user_posts = current_user.posts.all
-    respond_to do |format|
-      format.rss { render :layout => false }
-    end
   end
 
   # GET /posts/1
@@ -68,6 +65,15 @@ class PostsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
       format.json { head :no_content }
+    end
+  end
+
+  def feed
+    @posts = Post.all(:select => "title, user_id, id, body, created_at", :order => "created_at DESC", :limit => 20)
+
+    respond_to do |format|
+      format.html
+      format.rss { render :layout => false } #index.rss.builder
     end
   end
 
