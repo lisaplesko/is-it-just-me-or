@@ -1,3 +1,12 @@
+Handlebars.registerHelper('link', function(text, url) {
+  text = Handlebars.Utils.escapeExpression(text);
+  url  = Handlebars.Utils.escapeExpression(url);
+
+  var result = '<a href="' + url + '">' + text + '</a>';
+
+  return new Handlebars.SafeString(result);
+});
+
 $(document).ready(function(){
 
   $('#scroll-section').scroll(updateText);
@@ -30,6 +39,8 @@ $.ajax({
 //   .done(displayOne);
 // });
 
+
+
 var displayOne = function(categories){
   insertScrollBreakSection(categories[0]);
   insertCategorySection(categories[0], 0);
@@ -60,16 +71,11 @@ var insertCategorySection = function(category, count){
 };
 
 var generatePostHTML = function(post){
-  var postSource = $('#post-template').html();
-  var template = Handlebars.compile(postSource);
-  var postHTML = template(post);
-  return postHTML;
+  return HandlebarsTemplates['posts/show'](post);
 };
 
 var insertScrollBreakSection = function(category){
-  var scrollbreak_source = $('#scrollbreak-template').html();
-  var template = Handlebars.compile(scrollbreak_source);
-  var scrollbreak_html = template(category);
+  var scrollbreak_html = HandlebarsTemplates['scroller/break'](category);
   $('#scroll-section').append(scrollbreak_html);
 };
 

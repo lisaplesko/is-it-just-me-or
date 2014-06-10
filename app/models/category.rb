@@ -19,7 +19,7 @@ class Category < ActiveRecord::Base
     end
 
     def self.top_8
-      Category.all.sample(8)
+      Category.includes(:posts).limit(8) #return AR association
     end
 
     def rank_post
