@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'home#index'
+root 'home#index'
   get 'posts/feed', to: 'posts#feed', as: 'feed'
 
   devise_for :users, path_names: {sign_in: "login", sign_out: "logout"},
