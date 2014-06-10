@@ -14,25 +14,26 @@
 
 </head>
   <body>
+
     <% flash.each do |name, msg| %>
       <% if msg.is_a?(String) %>
         <%= content_tag :div, msg, :class => "flash_#{name}" %>
       <% end %>
     <% end %>
-
     <div class='container'>
-      <nav class="navbar navbar-inverse" role="navigation">
-        <% if user_signed_in? %>
-          Logged in as <strong><%= current_user.username %></strong>.
-          <%= link_to 'Edit profile', edit_user_registration_path %>
-          <%= link_to "Logout", destroy_user_session_path %>
-          <%= link_to "My Blog", user_posts_path(current_user) %>
-        <% else %>
-          <%= link_to "Sign up", new_user_registration_path %>
-          <%= link_to "Login", new_user_session_path %>
-          <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook), class: "btn btn-default", role: "button"  %>
-        <% end %>
-      </nav>
+      <div class='navbar-collapse navbar-inverse navbar-fixed-top'>
+        <ul class='nav navbar-nav'>
+          <% if user_signed_in? %>
+            <li><%= link_to 'Edit profile', edit_user_registration_path %></li>
+            <li><%= link_to "Logout", destroy_user_session_path %></li>
+            <li><%= link_to current_user.username, user_posts_path(current_user, class: 'user-name')%></li>
+          <% else %>
+            <li><%= link_to "Sign up", new_user_registration_path %></li>
+            <li><%= link_to "Login", new_user_session_path %></li>
+            <li><%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %></li>
+          <% end %>
+        </ul>
+      </div>
     </div>
 
     <%= yield %>

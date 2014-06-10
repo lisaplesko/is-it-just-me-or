@@ -14,3 +14,8 @@
  *= require_self
  *= require medium-editor/medium-editor
  */
+body { padding-top: 50px; }
+
+li.user-name{
+  float: right;
+}
