@@ -7,6 +7,9 @@ class PostsController < ApplicationController
   def index
     @posts = current_user.posts.all
     # @user_posts = current_user.posts.all
+    respond_to do |format|
+      format.rss { render :layout => false }
+    end
   end
 
   # GET /posts/1

@@ -19,6 +19,7 @@
       <% end %>
     <% end %>
 
+    <%= auto_discovery_link_tag(:rss, "http://iblog.com") %>
     <% if user_signed_in? %>
       Logged in as <strong><%= current_user.username %></strong>.
       <%= link_to 'Edit profile', edit_user_registration_path, class: "btn btn-default", role: "button" %>
