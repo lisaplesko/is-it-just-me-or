@@ -24,10 +24,8 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
-    binding.pry
     @post = current_user.posts.find(params[:id])
-    @category_options = Category.all.order(:name)
-    @category = @post[:category]
+    @category_options = Category.all.map{ |category| [category.name, category.id] }
   end
 
   # POST /posts

@@ -8,12 +8,8 @@
         <%= f.text_field :title,
                           input_html: {class: ""},
                           placeholder: "title", class: "title-input-field" %>
-        <select name="category">
-        <option value="nil">Select a Category for Post</option>
-          <% @category_options.each do |category| %>
-            <option value="<%= category.id %>"><%= category.name %></option>
-          <% end %>
-        </select>
+
+        <%= f.select :category_id, @category_options.sort, include_blank: true %>
 
 
         <%= f.hidden_field :body %>
