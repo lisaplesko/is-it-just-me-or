@@ -14,8 +14,18 @@
  *= require_self
  *= require medium-editor/medium-editor
  */
-body { padding-top: 50px; }
+body {
+  padding-top: 50px;
+  padding-bottom:  50px;
+}
 
 li.user-name{
   float: right;
+}
+.mini-profile-pic{
+  height: 50px;
+  width: 50px;
+  float: right;
+  border: 1px solid white;
+  border-radius: 50%;
 }
