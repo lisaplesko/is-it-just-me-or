@@ -8,6 +8,14 @@
         <%= f.text_field :title,
                           input_html: {class: ""},
                           placeholder: "title", class: "title-input-field" %>
+        <select name="category">
+        <option value="nil">Select a Category for Post</option>
+          <% @category_options.each do |category| %>
+            <option value="<%= category.id %>"><%= category.name %></option>
+          <% end %>
+        </select>
+
+
         <%= f.hidden_field :body %>
 
         <div class="post-body editable" id="editor" contentEditable='true' data-placeholder='Is it just me, or...'></div>

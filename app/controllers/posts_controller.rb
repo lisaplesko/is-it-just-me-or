@@ -18,17 +18,26 @@ class PostsController < ApplicationController
   # GET /posts/new
   def new
     @post = Post.new
+    @category_options = Category.all.order(:name)
+
   end
 
   # GET /posts/1/edit
   def edit
+    binding.pry
     @post = current_user.posts.find(params[:id])
+    @category_options = Category.all.order(:name)
+    @category = @post[:category]
   end
 
   # POST /posts
   # POST /posts.json
   def create
-    @post = current_user.posts.new(post_params)
+    @post = Post.new(post_params)
+    @post.user = current_user
+    binding.pry
+    @post.category = post_params[:category]
+
 
     respond_to do |format|
       if @post.save
@@ -76,6 +85,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :body, :user)
+      params.require(:post).permit(:title, :body, :category_id)
     end
 end

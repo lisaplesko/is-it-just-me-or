@@ -16,8 +16,11 @@
     <% end %>
 
     <% if @post.user == current_user %>
-      <%= link_to 'Edit', edit_post_path(@post) %> |
+      <%= link_to 'Edit this post', edit_post_path(@post), class: "outline-button" %> |
     <% end %>
+
+
+  <div class="comments-container"
 
     <%= render 'comments/form' %>
     <br>
