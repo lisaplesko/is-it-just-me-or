@@ -6,16 +6,16 @@
   <script id="post-template" type="text/x-handlebars-template">
       <div class='single-post'>
         <article><blockquote class='blockquote'>
-        {{this.title}} - {{this.view_counter}}
+        <%= link_to '{{this.title}}', '' %> - Views: {{this.view_counter}}
         <ul class='list-unstyled'>{{this.body}}</ul>
-        <footer>{{this.user.username}}</footer>
+        <footer><%= link_to '{{this.user}}', '' %></footer>
         </blockquote>
         </article>
       </div>
   </script>
   <script id='scrollbreak-template' type="text/x-handlebars-template">
     <section class="scrollbreak" id='{{this.name}}' data-type="background" data-speed="10">
-      {{this.name}}
+      <%= link_to '{{this.name}}', '' %>
     </section>
   </script>
 </head>
