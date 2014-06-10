@@ -7,6 +7,9 @@
   <div class='row'>
     <div class='col-md-3'>
       <img style='height: 100%' class='profile-pic' src=<%= current_user.profile_url %> />
+      <div class='author'>
+        <small class='small-text'>posted by</small> - <%= @post.user.username.upcase %>
+      </div>
     </div>
     <div class='col-md-8'>
       <div id='blog-title'>
