@@ -7,6 +7,10 @@ json.array!(@top8) do |category|
     json.url post_url(post)
     json.username post.user.username
     json.user_url user_url(post.user_id)
+    json.comments post.comments.each do |comment|
+      json.comment_body comment.body
+    end
   end
+
 end
 
