@@ -37,10 +37,15 @@ button:focus {
 }
 
 .outline-button {
-  border: 1px solid black;
-  background: rgba(255,255,255,0.5);
-  border-radius: 20px;
+  /*border: 1px solid black;*/
+  background: rgba(0,0,0,0.1);
+  border-radius: 15px;
   padding: 10px;
+  color: black;
+}
+
+.outline-button:hover {
+  text-decoration: none;
 }
 
 .post-container {
@@ -48,6 +53,9 @@ button:focus {
   margin: 0 auto;
 }
 
+.comments-container {
+  margin: 20px 0;
+}
 
 
 

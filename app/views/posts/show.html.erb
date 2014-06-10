@@ -11,21 +11,31 @@
       <%= @post.body.html_safe %>
     </div>
 
+
+  <div class="panel">
+
     <% @post.comments.each do |comment| %>
       <div><%= comment.body %> <b>posted by</b> <%= comment.user_email %></div>
     <% end %>
 
-    <% if @post.user == current_user %>
-      <%= link_to 'Edit this post', edit_post_path(@post), class: "outline-button" %> |
-    <% end %>
-
-
-  <div class="comments-container"
-
-    <%= render 'comments/form' %>
-    <br>
-    <%= link_to 'Back', posts_path, class: "btn btn-default", role: "button"  %>
-
   </div>
+
+
+
+
+  <div class="comments-container">
+    <%= render 'comments/form' %>
+  </div>
+
+  <div class="post-buttons">
+
+    <%= link_to '< Back', posts_path(current_user), class: "outline-button", role: "button"  %>
+
+    <% if @post.user == current_user %>
+      <%= link_to 'Edit this post', edit_post_path(@post), class: "outline-button" %>
+    <% end %>
+  </div>
+
+
 
 </div>
