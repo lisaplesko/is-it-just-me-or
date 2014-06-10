@@ -9,12 +9,13 @@
                           input_html: {class: ""},
                           placeholder: "title", class: "title-input-field" %>
 
-        <%= f.select :category_id, @category_options.sort, include_blank: true %>
-
-
         <%= f.hidden_field :body %>
 
         <div class="post-body editable" id="editor" contentEditable='true' data-placeholder='Is it just me, or...'></div>
+
+        <%= f.select :category_id, @category_options.sort, { :prompt => "Select a category" } , { class: "dropdown-select" } %>
+
+        <hr>
 
         <%= f.submit 'Create new post', class: "outline-button" %>
       <% end %>

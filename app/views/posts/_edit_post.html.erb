@@ -9,8 +9,6 @@
         <%= f.text_field :title,
                           placeholder: "title", class: "title-input-field" %>
 
-        <%= f.select :category_id, @category_options.sort, include_blank: true %>
-
         <%= f.hidden_field :body %>
 
         <div class="post-body editable" id="editor" contentEditable='true' data-placeholder='Is it just me, or...'>
@@ -18,6 +16,10 @@
             <%= @post.body.html_safe %>
           <% end %>
         </div>
+
+        <%= f.select :category_id, @category_options.sort, { :prompt => "Select a category" } , { class: "dropdown-select" } %>
+
+        <hr>
 
         <%= f.submit 'Publish', class: "outline-button" %>
       <% end %>
