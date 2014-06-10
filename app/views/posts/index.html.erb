@@ -7,21 +7,19 @@
   <div class='row'>
     <div class='col-md-3'>
       <img style='height: 100%' class='profile-pic' src=<%= current_user.profile_url %> />
-      <div class='new-post'>
-        <%= link_to 'New Post', new_user_post_path, class: 'outline-button' %>
-      </div>
     </div>
     <div class='col-md-8'>
       <div id='blog-title'>
-        <h1 id='title'>Is It Just Me Or....</h1>
-      </div>
-      <div class='panel panel-default'>
-        <% current_user.posts.each do |post| %>
-          <div class='post'>
-            <h4><%= link_to post.title, post_path(post), class: 'post-title' %></h4>
-          </div>
-        <% end %>
+        <h1 id='title'>Is it just me, or...?</h1>
       </div>
     </div>
+
+    <% current_user.posts.each do |post| %>
+    <div class='post'>
+      <h3><%= link_to post.title, post_path(post) %></h3>
+    </div>
+  <% end %>
+
+
   </div>
 </div>

@@ -1,23 +1,31 @@
 <div class="container">
 <%= render 'photo_header' %>
-  <div class="status"></div>
-  <div class="title-input-field">
-    <%= @post.title %>
+
+  <div class="post-container" >
+
+    <div class="status"></div>
+    <div class="title-input-field">
+      <%= @post.title %>
+    </div>
+    <div class="post-body">
+      <%= @post.body.html_safe %>
+    </div>
+
+    <% @post.comments.each do |comment| %>
+      <div><%= comment.body %> <b>posted by</b> <%= comment.user_email %></div>
+    <% end %>
+
+    <% if @post.user == current_user %>
+      <%= link_to 'Edit this post', edit_post_path(@post), class: "outline-button" %> |
+    <% end %>
+
+
+  <div class="comments-container"
+
+    <%= render 'comments/form' %>
+    <br>
+    <%= link_to 'Back', posts_path, class: "btn btn-default", role: "button"  %>
+
   </div>
-  <div class="post-body">
-    <%= @post.body.html_safe %>
-  </div>
-
-  <% @post.comments.each do |comment| %>
-    <div><%= comment.body %> <b>posted by</b> <%= comment.user_email %></div>
-  <% end %>
-
-  <% if @post.user == current_user %>
-    <%= link_to 'Edit', edit_post_path(@post) %> |
-  <% end %>
-
-  <%= render 'comments/form' %>
-  <br>
-  <%= link_to 'Back', posts_path, class: "btn btn-default", role: "button"  %>
 
 </div>
