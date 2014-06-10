@@ -1,4 +1,3 @@
 <%= render 'edit_post' %>
 
-<%= link_to 'Show', @post %> |
-<%= link_to 'Back', posts_path %>
+<%= link_to '< Back', post_path(@post), class: "outline-button", role: "button"  %>
