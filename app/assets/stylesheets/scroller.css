@@ -1,6 +1,12 @@
+#scroll-section {
+  background: url(http://www.jodihelmer.com/wordpress/wp-content/uploads/2014/01/desk-and-typewriter.jpg) 50% 0 repeat fixed; min-height: 800px;
+
+}
+
 .scrollback {
-  background-color: white;
-  height: 800px;
+  background: url(http://www.jodihelmer.com/wordpress/wp-content/uploads/2014/01/desk-and-typewriter.jpg) 50% 0 repeat fixed;
+  /*background-color: white;*/
+  height: auto;
   margin: 0 auto;
   width: 60%;
   max-width: 1920px;
@@ -13,13 +19,13 @@
   /*http://petenowak2000.files.wordpress.com/2014/04/typewriter.jpg*/
   height: 75px;
   width: 60%;
+  margin: 0 auto;
   max-width: 1920px;
   position: relative;
   -webkit-box-shadow: 0 0 50px rgba(0,0,0,0.8);
   box-shadow: 0 0 50px rgba(0,0,0,0.8);
   color: white;
   text-align: center;
-  vertical-align: inherit;
   font-size: 35px;
 }
 
