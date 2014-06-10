@@ -31,6 +31,7 @@ body{
   border-radius: 50%;
 }
 #blog-title{
+  margin-top: 10px;
   margin-bottom: 40px;
   text-align: center;
   line-height: 3;
@@ -54,21 +55,8 @@ h4{
   font-family: 'Source Sans Pro', sans-serif;
   text-align: center;
 }
-.readbox{
-  position: absolute;
-  top: 5px;
-  right: 0;text-align: left;
-  height: 40px;
-  width: 40px;
-  border: 1px solid black;
-}
-.blog-panel{
-  position: absolute;
-  width: 150px;
-  float: left;
-}
-.user-panel{
-  margin-top: 15px;
-  margin-bottom: 20px;
+.new-post{
+  margin-top: 20px;
   margin-left: 40px;
+  margin-bottom: 20px;
 }
