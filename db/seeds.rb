@@ -70,7 +70,7 @@ end
 # Faker data for posts
 150.times do |post|
     title = Faker::Lorem.sentence
-    body = Faker::Lorem.sentence
+    body = Faker::Lorem.paragraph(30)
     new_post = Post.create(title: title, body: body)
     Category.all.sample.posts << new_post
     User.all.sample.posts << new_post
