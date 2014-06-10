@@ -14,7 +14,6 @@
 
 </head>
   <body>
-
     <% flash.each do |name, msg| %>
       <% if msg.is_a?(String) %>
         <%= content_tag :div, msg, :class => "flash_#{name}" %>

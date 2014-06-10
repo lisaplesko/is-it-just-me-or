@@ -4,11 +4,11 @@
   <title>Is it just me or...?</title>
   <!--script src="/assets/javascripts/handlebars.hbs.erb" type="text/x-handlebars-template" charset="utf-8" id="category-template"></script-->
   <script id="post-template" type="text/x-handlebars-template">
-      <div>
+      <div class='single-post'>
         <article><blockquote class='blockquote'>
         {{this.title}} - {{this.view_counter}}
         <ul class='list-unstyled'>{{this.body}}</ul>
-        <footer>Post Author</footer>
+        <footer>{{this.user.username}}</footer>
         </blockquote>
         </article>
       </div>
@@ -24,6 +24,8 @@
 
   <div id='scroll-section'>
   </div>
+
+
 
 </div>
 
