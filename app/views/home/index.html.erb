@@ -2,31 +2,16 @@
 <html>
 <head>
   <title>Is it just me or...?</title>
-  <!--script src="/assets/javascripts/handlebars.hbs.erb" type="text/x-handlebars-template" charset="utf-8" id="category-template"></script-->
-  <script id="post-template" type="text/x-handlebars-template">
-      <div class='single-post'>
-        <article><blockquote class='blockquote'>
-        {{this.title}} - {{this.view_counter}}
-        <ul class='list-unstyled'>{{this.body}}</ul>
-        <footer>{{this.user.username}}</footer>
-        </blockquote>
-        </article>
-      </div>
-  </script>
+
   <script id='scrollbreak-template' type="text/x-handlebars-template">
-    <section class="scrollbreak" id='{{this.name}}' data-type="background" data-speed="10">
-      {{this.name}}
-    </section>
+
   </script>
 </head>
 <body>
-<div class='.container'>
 
+<div class='.container'>
   <div id='scroll-section'>
   </div>
-
-
-
 </div>
 
 </body>
