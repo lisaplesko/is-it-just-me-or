@@ -20,5 +20,5 @@ gem 'omniauth-facebook'
 gem 'faker'
 gem 'medium-editor-rails'
 gem 'active_model_serializers'
-gem 'feedzirra'
+gem 'feedjira'
 
