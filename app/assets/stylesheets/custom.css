@@ -34,6 +34,7 @@ button:focus {
   min-height: 20px;
   font-style: italic;
   color: gray;
+  text-align: right;
 }
 
 .outline-button {
@@ -51,13 +52,20 @@ button:focus {
 .post-container {
   width: 50%;
   margin: 0 auto;
+  position: relative;
 }
 
 .comments-container {
   margin: 20px 0;
 }
 
-
+.settings {
+  width: 30px;
+  position: absolute;
+  right: 0px;
+  top: 40px;
+  background-image: url("http://i.imgur.com/pmnMgqX.png");
+}
 
 
 @media (max-width: 700px) {
