@@ -1,8 +1,8 @@
 class CategorySerializer < ActiveModel::Serializer
-  attributes :id, :name, :creator
+  attributes :id, :name, :author
   has_many :posts
 
-  def creator
+  def author
     "#{object.post.user.username}"
   end
 end

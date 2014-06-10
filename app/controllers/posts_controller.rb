@@ -5,8 +5,11 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = current_user.posts.all
-    # @user_posts = current_user.posts.all
+    if params[:user_id].nil?
+      @posts = Post.all
+    else
+      @posts = User.find(params[:user_id]).posts
+    end
   end
 
   # GET /posts/1
@@ -69,6 +72,26 @@ class PostsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
       format.json { head :no_content }
+    end
+  end
+
+  def feed
+    @this_post = Post.find(params[:id])
+    @this_user = @this_post.user
+    # this will be the name of the feed displayed on the feed reader
+    @title = "IIJMO RSS: #{@this_post.title}"
+
+    # the news items
+    @users_posts = @this_user.posts.all.order("created_at desc")
+
+    # this will be our Feed's update timestamp
+    @updated = @users_posts.first.created_at unless @users_posts.empty?
+
+    respond_to do |format|
+      format.atom { render :layout => false }
+
+      # we want the RSS feed to redirect permanently to the ATOM feed
+      format.rss { redirect_to feed_path(:format => :atom), :status => :moved_permanently }
     end
   end
 
