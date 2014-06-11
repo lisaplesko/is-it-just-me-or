@@ -1,11 +1,14 @@
 #scroll-section {
   top: 100px;
   position: float;
-  background: url(http://www.slashgear.com/wp-content/uploads/2008/11/datamancer_ergo_keyboard_4.jpg) 50% 0 repeat fixed;
+  background: url(http://floydsproduce.com/blog/wp-content/uploads/2013/03/Wood-Texture-wood-texture-1920x1080-1.jpg) 0 repeat fixed;
   /*http://www.jodihelmer.com/wordpress/wp-content/uploads/2014/01/desk-and-typewriter.jpg*/
   /*http://petenowak2000.files.wordpress.com/2014/04/typewriter.jpg*/
   /*http://dogknobit.com/wp-content/uploads/2014/03/holli-typejunkie.jpg*/
-
+  /*http://www.slashgear.com/wp-content/uploads/2008/11/datamancer_ergo_keyboard_4.jpg*/
+  /*http://gadgets.boingboing.net/gimages/eoodkeyboard.jpg*/
+  /*http://i0.wp.com/theultralinx.com/wp-content/uploads/2013/09/Oree-Board-Wooden-Keyboard-3.jpeg*/
+  /*http://www.wildtextures.com/wp-content/uploads/2011/11/wildtextures-dark-wood-board.jpg*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -16,10 +19,10 @@
 }
 
 .scrollback {
-  background: url(http://www.slashgear.com/wp-content/uploads/2008/11/datamancer_ergo_keyboard_4.jpg) 50% 0 repeat fixed;
+  background: url(http://floydsproduce.com/blog/wp-content/uploads/2013/03/Wood-Texture-wood-texture-1920x1080-1.jpg) 50% 0 repeat fixed;
   height: auto;
   margin: 0 auto;
-  width: 75%;
+  width: 65%;
   max-width: 1920px;
   position: relative;
   text-align: center;
@@ -30,9 +33,15 @@
 }
 
 .scrollbreak {
-  background: url(http://dogknobit.com/wp-content/uploads/2014/03/holli-typejunkie.jpg) 50% 0 repeat fixed; min-height: 75px;
-  height: 75px;
-  width: 75%;
+  border: 2px solid;
+  border-radius: 25px;
+  background: url(http://aveyotech.com/wp-content/uploads/2014/03/brushed-aluminum.jpg)  0 repeat fixed; min-height: 90px;
+  height: 90px;
+  background-position: right;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  width: 65%;
   margin: 0 auto;
   max-width: 1920px;
   position: relative;
@@ -40,7 +49,92 @@
   box-shadow: 0 0 50px rgba(0,0,0,0.8);
   color: white;
   text-align: center;
-  font-size: 35px;
+  font-size: 45px;
+  font-weight: bolder;
+}
+
+.scrollbreak a:link {
+position: float;
+/*background: url(http://floydsproduce.com/blog/wp-content/uploads/2013/03/Wood-Texture-wood-texture-1920x1080-1.jpg) 50% 0 repeat fixed;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;*/
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+color: black;
+-webkit-stroke-width: 5.3px;
+-webkit-stroke-color: #FFFFFF;
+-webkit-fill-color: #FFFFFF;
+text-shadow: 3px 3px 80px black;
+-webkit-transition: width 0.3s; /*Safari & Chrome*/
+transition: width 0.3s;
+-moz-transition: width 0.3s; /* Firefox 4 */
+-o-transition: width 0.3s; /* Opera */
+outline-color: white;
+}
+
+/* visited link */
+.scrollbreak a:visited {
+position: float;
+/*background: url(http://floydsproduce.com/blog/wp-content/uploads/2013/03/Wood-Texture-wood-texture-1920x1080-1.jpg) 50% 0 repeat fixed;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;*/
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+color: black;
+-webkit-stroke-width: 5.3px;
+-webkit-stroke-color: #FFFFFF;
+-webkit-fill-color: #FFFFFF;
+text-shadow: 3px 3px 80px black;
+-webkit-transition: width 0.3s; /*Safari & Chrome*/
+transition: width 0.3s;
+-moz-transition: width 0.3s; /* Firefox 4 */
+-o-transition: width 0.3s; /* Opera */
+outline-color: white;
+}
+
+/* mouse over link */
+.scrollbreak a:hover {
+font-size: 45px;
+color: white;
+position: float;
+background: url(http://www.wildtextures.com/wp-content/uploads/2012/02/wildtextures_dark_wood_glossy_floor.jpg) 50% 0 repeat fixed;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+
+-webkit-stroke-width: 5.3px;
+   -webkit-stroke-color: #FFFFFF;
+   -webkit-fill-color: #FFFFFF;
+   text-shadow: 0px 4px 35px white;
+   -webkit-transition: width 0.3s; /*Safari & Chrome*/
+   transition: width 0.3s;
+   -moz-transition: width 0.3s; /* Firefox 4 */
+   -o-transition: width 0.3s; /* Opera */
+}
+
+/* selected link */
+.scrollbreak a:active {
+position: float;
+/*background: url(http://floydsproduce.com/blog/wp-content/uploads/2013/03/Wood-Texture-wood-texture-1920x1080-1.jpg) 50% 0 repeat fixed;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;*/
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+color: black;
+-webkit-stroke-width: 5.3px;
+-webkit-stroke-color: #FFFFFF;
+-webkit-fill-color: #FFFFFF;
+text-shadow: 3px 3px 80px black;
+-webkit-transition: width 0.3s; /*Safari & Chrome*/
+transition: width 0.3s;
+-moz-transition: width 0.3s; /* Firefox 4 */
+-o-transition: width 0.3s; /* Opera */
+outline-color: white;
 }
 
 .single-post {

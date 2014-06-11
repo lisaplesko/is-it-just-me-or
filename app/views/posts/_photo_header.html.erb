@@ -7,8 +7,11 @@
   <div class='row'>
     <div class='col-md-3'>
       <img style='height: 100%' class='profile-pic' src=<%= current_user.profile_url %> />
+      <div class='author'>
+        <small class='small-text'>Author</small> - <%= @post.user %>
+      </div>
     </div>
-    <div class='col-md-8'>
+    <div class='col-md-7'>
       <div id='blog-title'>
         <h1 id='title'>Is It Just Me, Or...</h1>
       </div>
