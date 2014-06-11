@@ -17,6 +17,7 @@ gem 'pry-nav', group: :development
 gem 'devise'
 gem 'dotenv-rails'
 gem 'omniauth-facebook'
+gem "omniauth-google-oauth2"
 gem 'faker'
 gem 'medium-editor-rails'
 gem 'active_model_serializers'
