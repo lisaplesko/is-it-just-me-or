@@ -23,8 +23,13 @@ li.user-name{
   float: right;
 }
 .mini-profile-pic{
+  max-width: 50px;
+}
+
+.mini-profile-pic-container{
   height: 50px;
   width: 50px;
+  overflow: hidden;
   float: right;
   border: 1px solid white;
   border-radius: 50%;

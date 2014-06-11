@@ -12,7 +12,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   def google_oauth2
-    binding.pry
     @user = User.find_for_google_oauth2(request.env["omniauth.auth"], current_user)
 
     if @user.persisted?

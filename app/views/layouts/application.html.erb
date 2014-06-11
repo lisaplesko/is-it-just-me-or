@@ -44,7 +44,7 @@
               <li><%= link_to "Logout", destroy_user_session_path %></li>
             </ul>
             <div>
-              <img style='height: 100%' class='mini-profile-pic' src=<%= current_user.profile_url %> />
+              <div class="mini-profile-pic-container"><img class='mini-profile-pic' src=<%= current_user.profile_url %> /></div>
             </div>
             <ul class='nav navbar-nav pull-right'>
               <li><%= link_to current_user.username, user_posts_path(current_user, class: 'user-name')%></li>
