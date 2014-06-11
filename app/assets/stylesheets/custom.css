@@ -120,7 +120,13 @@ body.login-page {
   }
 
 }
-
+.author{
+  margin-left: 30px;
+}
+.small-text{
+  font-family: 'Dancing Script', cursive;
+  font-size: 14px;
+}
 
 /* Resource for placeholder in editable div
 http://blogs.teamb.com/craigstuntz/2013/01/29/38734/

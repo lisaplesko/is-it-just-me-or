@@ -1,5 +1,5 @@
 <%= form_for [@post, @comment] do |f| %>
   <%= f.label :body, "Post a new comment." %><br>
   <%= f.text_field :body %>
-  <%= f.submit %>
+  <%= f.submit :class => "btn btn-success comment-button" %>
 <% end %>

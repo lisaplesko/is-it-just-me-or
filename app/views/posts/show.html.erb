@@ -21,7 +21,7 @@
   <div class="well">
 
     <% @post.comments.each do |comment| %>
-      <div><%= comment.body %> <b>posted by</b> <%= comment.user_email %></div>
+      <div><%= comment.body %> <small class='small-text'> posted by </small><%= comment.user_email %></div>
     <% end %>
 
   </div>

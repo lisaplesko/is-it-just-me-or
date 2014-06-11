@@ -10,6 +10,7 @@
 <script type="text/javascript" src="//use.typekit.net/yqt5rux.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300' rel='stylesheet' type='text/css'>
 
 <%= auto_discovery_link_tag(:rss, feed_url) %>
@@ -34,6 +35,28 @@
       <% end %>
     <% end %>
 
+    <div class='container'>
+      <div class='navbar-collapse navbar-inverse navbar-fixed-top'>
+          <% if user_signed_in? %>
+            <ul class='nav navbar-nav pull-left'>
+              <li><%= link_to "IIJMO", root_path %></li>
+              <li><%= link_to 'Edit profile', edit_user_registration_path %></li>
+              <li><%= link_to "Logout", destroy_user_session_path %></li>
+            </ul>
+            <div>
+              <img style='height: 100%' class='mini-profile-pic' src=<%= current_user.profile_url %> />
+            </div>
+            <ul class='nav navbar-nav pull-right'>
+              <li><%= link_to current_user.username, user_posts_path(current_user, class: 'user-name')%></li>
+            </ul>
+          <% else %>
+            <li><%= link_to "Sign up", new_user_registration_path %></li>
+            <li><%= link_to "Login", new_user_session_path %></li>
+            <li><%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
 
     <%= yield %>
   </body>
