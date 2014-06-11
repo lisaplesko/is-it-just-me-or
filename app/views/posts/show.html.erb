@@ -18,6 +18,8 @@
     </div>
 
 
+  <%= image_tag @post.image.url(:thumb) %>
+
   <div class="well">
 
     <% @post.comments.each do |comment| %>
