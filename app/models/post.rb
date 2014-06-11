@@ -7,4 +7,8 @@ class Post < ActiveRecord::Base
     self.comments.count
   end
 
+  def body_summary
+    self.body.split(/[.?!]/)[0].concat('...')
+  end
+
 end

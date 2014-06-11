@@ -6,6 +6,7 @@ json.array!(@top8) do |category|
     json.extract! post, :id, :title, :body, :created_at, :updated_at, :view_counter, :category_id, :user_id
     json.url post_url(post)
     json.username post.user.username
+    json.body_summary post.body_summary
     json.user_url user_url(post.user_id)
     json.comments post.comments.each do |comment|
       json.comment_body comment.body
