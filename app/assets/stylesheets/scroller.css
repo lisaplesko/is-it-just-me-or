@@ -26,6 +26,10 @@
   color: #aaaaaa;
 }
 
+#category-name a:link, a:visited, a:active {
+  color: black;
+}
+
 .scrollback {
   background: url(http://floydsproduce.com/blog/wp-content/uploads/2013/03/Wood-Texture-wood-texture-1920x1080-1.jpg) 50% 0 repeat fixed;
   height: auto;
