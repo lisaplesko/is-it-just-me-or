@@ -6,7 +6,7 @@
   </div>
   <div class='row'>
     <div class='col-md-3'>
-      <img style='height: 100%' class='profile-pic' src=<%= user.profile_url %> />
+      <div class="profile-pic-container"><img class='profile-pic' src=<%= current_user.profile_url %> /></div>
       <div class='author'>
         <small class='small-text'>Author</small> - <%= @post.user.first_name %>
       </div>

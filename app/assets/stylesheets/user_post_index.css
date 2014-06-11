@@ -13,6 +13,7 @@ body{
 .top-image{
   position: relative;
   height: 250px;
+  padding: 0px !important;
 }
 .background-image{
   height:100%;
@@ -23,11 +24,15 @@ body{
   background-image: url('http://www.wildtextures.com/wp-content/uploads/2012/02/wildtextures_dark_wood_glossy_floor.jpg');
 }
 .profile-pic{
+  max-width: 150px;
+}
+.profile-pic-container{
   height: 150px;
   width: 150px;
+  overflow: hidden;
   border: 3px solid white;
   margin-top: -70px;
-  margin-left: 10px;
+  margin-left: 20px;
   border-radius: 50%;
 }
 #blog-title{
