@@ -51,8 +51,10 @@ class User < ActiveRecord::Base
         return registered_user
       else
         user = User.create(name: data["name"],
+          first_name: data["first_name"],
           provider:access_token.provider,
           email: data["email"],
+          profile_url: data["image"].gsub!("sz=50", "sz=200"),
           uid: access_token.uid ,
           password: Devise.friendly_token[0,20],
         )
