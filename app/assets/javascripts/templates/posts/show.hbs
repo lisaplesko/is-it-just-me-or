@@ -1,8 +1,29 @@
 <div class='single-post'>
   <article><blockquote class='blockquote'>
-  <a href="{{this.url}}">{{this.title}}</a>  - Views: {{this.view_counter}}
-  <ul class='list-unstyled'>{{this.body}}</ul>
-  <footer><a href="{{this.user_url}}">{{this.username}}</a></footer>
+    <div class='text-in-post'>
+      <div class='row'>
+        <div class='col-md-8'>
+          <a href="{{this.url}}">{{this.title}}</a>
+        </div>
+        <div class='col-md-4'>
+          <h5>{{this.view_counter}} views</h5>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='col-md-12'>
+          {{this.body_summary}}
+        </div>
+      </div>
+      <div class='row'>
+        <div class='col-md-8'>
+        </div>
+        <div class='col-md-4'>
+          <footer><a href="{{this.user_url}}">{{this.username}}</a></footer>
+        </div>
+      </div>
+    </div>
   </blockquote>
   </article>
 </div>
+
+
