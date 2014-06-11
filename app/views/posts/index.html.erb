@@ -19,7 +19,7 @@
         <% current_user.posts.each do |post| %>
           <div class='post' id=<%=post.id%>>
             <h4><%= link_to post.title, post_path(post), class: 'post-title' %></h4>
-            <div class='post-body'>
+            <div class='body-text'>
               <p><%= post.body %></p>
             </div>
           </div>
