@@ -11,4 +11,9 @@ class Post < ActiveRecord::Base
     self.body.split(/[.?!]/)[0].concat('...')
   end
 
+  def increment_counter
+    self.view_counter += 1
+    self.save
+  end
+
 end
