@@ -3,7 +3,13 @@
 
   <div class="post-container" >
 
+    <% if @post.user == current_user %>
+    <%= render 'settings' %>
+    <!-- <img src="http://i.imgur.com/pmnMgqX.png" class="settings"> -->
+    <% end %>
+
     <div class="status"></div>
+
     <div class="title-input-field">
       <%= @post.title %>
     </div>
@@ -12,7 +18,7 @@
     </div>
 
 
-  <div class="panel">
+  <div class="well">
 
     <% @post.comments.each do |comment| %>
       <div><%= comment.body %> <small class='small-text'> posted by </small><%= comment.user_email %></div>
@@ -34,6 +40,13 @@
     <% if @post.user == current_user %>
       <%= link_to 'Edit this post', edit_post_path(@post), class: "outline-button" %>
     <% end %>
+
+    <% if @post.user == current_user %>
+      <%= link_to 'Delete this post', @post, method: :delete, data: { confirm: 'Are you sure?' }, class: "outline-button" %>
+    <% end %>
+
+
+
   </div>
 
 

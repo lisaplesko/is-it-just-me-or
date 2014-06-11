@@ -34,6 +34,7 @@ button:focus {
   min-height: 20px;
   font-style: italic;
   color: gray;
+  text-align: right;
 }
 
 .outline-button {
@@ -51,13 +52,54 @@ button:focus {
 .post-container {
   width: 50%;
   margin: 0 auto;
+  position: relative;
 }
 
 .comments-container {
   margin: 20px 0;
 }
 
+.settings {
+  width: 30px;
+  position: absolute;
+  right: 0px;
+  top: 40px;
+  background-image: url("http://i.imgur.com/pmnMgqX.png");
+}
 
+
+body.login-page {
+ background: url('http://www.jodihelmer.com/wordpress/wp-content/uploads/2014/01/desk-and-typewriter.jpg') no-repeat center center fixed;
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+}
+
+
+.panel-default {
+ opacity: 0.9;
+ margin-top:30px;
+}
+
+.form-group.last {
+ margin-bottom:0px;
+}
+
+.login-header {
+  font-size: 50px;
+  color: white;
+  text-shadow: 1px 1px 1px #000;
+  margin-left: 15%;
+  text-align: center;
+  font-family: "ff-prater-script-web", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.panel-heading {
+  text-align: right;
+}
 
 
 @media (max-width: 700px) {
