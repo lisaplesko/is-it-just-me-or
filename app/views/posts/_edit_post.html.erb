@@ -21,6 +21,13 @@
 
         <hr>
 
+        <div class="field">
+          <%= f.label :image %><br />
+          <%= f.file_field :image %>
+        </div>
+
+        <hr>
+
         <%= f.submit 'Publish', class: "outline-button" %>
       <% end %>
 
