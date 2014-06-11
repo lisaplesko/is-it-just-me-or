@@ -14,6 +14,7 @@
  *= require_self
  *= require medium-editor/medium-editor
  */
+
 body {
   padding-top: 50px;
   padding-bottom:  50px;
