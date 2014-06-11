@@ -13,6 +13,18 @@
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300' rel='stylesheet' type='text/css'>
 
 <%= auto_discovery_link_tag(:rss, feed_url) %>
+
+
+<!-- http://stackoverflow.com/questions/7131909/facebook-callback-appends-to-return-url -->
+<!-- Callback temporary fix -->
+<script type="text/javascript">
+    if (window.location.hash && window.location.hash == '#_=_') {
+        window.location.hash = '';
+    }
+</script>
+
+
+
 </head>
   <body>
 
