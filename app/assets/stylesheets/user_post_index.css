@@ -43,10 +43,12 @@ h1#title {
 }
 h4{
   margin: 0;
-  margin-right: 50px;
 }
 .post-title{
   color: black;
+}
+.post-body{
+  padding: 20px;
 }
 .post{
   position: relative;
