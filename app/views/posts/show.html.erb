@@ -2,7 +2,7 @@
 <%= render 'photo_header' %>
 
   <div class="post-container" >
-
+  <% @post.view_counter += 1 %>
     <% if @post.user == current_user %>
     <%= render 'settings' %>
     <!-- <img src="http://i.imgur.com/pmnMgqX.png" class="settings"> -->
@@ -35,7 +35,7 @@
 
   <div class="post-buttons">
 
-    <%= link_to '< Back', user_posts_path(current_user), class: "outline-button", role: "button"  %>
+    <%= link_to '< Back', user_posts_path(@post.user), class: "outline-button", role: "button"  %>
 
     <% if @post.user == current_user %>
       <%= link_to 'Edit this post', edit_post_path(@post), class: "outline-button" %>

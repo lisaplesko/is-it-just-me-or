@@ -6,9 +6,11 @@
   </div>
   <div class='row'>
     <div class='col-md-3'>
-      <div class="profile-pic-container"><img class='profile-pic' src=<%= current_user.profile_url %> /></div>
+      <div class="profile-pic-container"><img class='profile-pic' src=<%= @posts.first.user.profile_url %> /></div>
       <div class='new-post'>
-        <%= link_to 'New Post', new_user_post_path(current_user), class: 'outline-button' %>
+        <% if current_user == @posts.first.user %>
+          <%= link_to 'New Post', new_user_post_path(current_user), class: 'outline-button' %>
+        <% end %>
       </div>
     </div>
     <div class='col-md-7'>
@@ -16,7 +18,7 @@
         <h1 id='title'>Is It Just Me, Or...</h1>
       </div>
       <div class='panel panel-default'>
-        <% current_user.posts.each do |post| %>
+        <% @posts.each do |post| %>
           <div class='post' id=<%=post.id%>>
             <h4><%= link_to post.title, post_path(post), class: 'post-title' %></h4>
             <div class='body-text'>

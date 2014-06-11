@@ -6,9 +6,9 @@
   </div>
   <div class='row'>
     <div class='col-md-3'>
-      <div class="profile-pic-container"><img class='profile-pic' src=<%= current_user.profile_url %> /></div>
+      <div class="profile-pic-container"><img class='profile-pic' src=<%= @post.user.profile_url %>/></div>
       <div class='author'>
-        <small class='small-text'>Author</small> - <%= current_user.first_name %> <!--not correct name reference-->
+        <small class='small-text'>Author</small> - <%= @post.user.name %>
       </div>
     </div>
     <div class='col-md-7'>

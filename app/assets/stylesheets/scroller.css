@@ -18,6 +18,18 @@
   margin-bottom: -4em;
 }
 
+#scroll-section a:link, a:visited, a:active {
+  color: #aaaaaa;
+}
+
+#scroll-section a:hover {
+  color: #aaaaaa;
+}
+
+#category-name a:link, a:visited, a:active {
+  color: black;
+}
+
 .scrollback {
   background: url(http://floydsproduce.com/blog/wp-content/uploads/2013/03/Wood-Texture-wood-texture-1920x1080-1.jpg) 50% 0 repeat fixed;
   height: auto;
@@ -61,7 +73,6 @@
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  color: black;
   -webkit-stroke-width: 5.3px;
   -webkit-stroke-color: #FFFFFF;
   -webkit-fill-color: #FFFFFF;
