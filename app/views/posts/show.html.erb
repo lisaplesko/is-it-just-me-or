@@ -2,7 +2,7 @@
 <%= render 'photo_header' %>
 
   <div class="post-container" >
-
+  <% @post.view_counter += 1 %>
     <% if @post.user == current_user %>
     <%= render 'settings' %>
     <!-- <img src="http://i.imgur.com/pmnMgqX.png" class="settings"> -->
