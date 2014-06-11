@@ -37,9 +37,10 @@
               <li><%= link_to current_user.username, user_posts_path(current_user, class: 'user-name')%></li>
             </ul>
           <% else %>
-            <li><%= link_to "Sign up", new_user_registration_path %></li>
-            <li><%= link_to "Login", new_user_session_path %></li>
-            <li><%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %></li>
+            <ul class='nav navbar-nav pull-left'>
+              <li><%= link_to "Sign up", new_user_registration_path %></li>
+              <li><%= link_to "Login", new_user_session_path %></li>
+            </ul>
           <% end %>
         </ul>
       </div>
