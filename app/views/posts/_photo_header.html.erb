@@ -8,7 +8,7 @@
     <div class='col-md-3'>
       <div class="profile-pic-container"><img class='profile-pic' src=<%= current_user.profile_url %> /></div>
       <div class='author'>
-        <small class='small-text'>Author</small> - <%= @post.user %>
+        <small class='small-text'>Author</small> - <%= @post.user.first_name %>
       </div>
     </div>
     <div class='col-md-7'>
