@@ -11,6 +11,8 @@ class Post < ActiveRecord::Base
   },
   default_url: '/images/:style/missing.png'
 
+  delegate :name, :profile_url, to: :user, prefix: true, allow_nil: true
+
   # def pluralize
   #   ActiveSupport::Inflector.pluralize(self)
   # end
