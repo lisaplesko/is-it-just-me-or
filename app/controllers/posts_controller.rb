@@ -11,6 +11,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    @post.increment_counter
     @comment = Comment.new(post: @post)
   end
 
