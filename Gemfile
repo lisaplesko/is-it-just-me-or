@@ -23,6 +23,6 @@ gem 'medium-editor-rails'
 gem 'active_model_serializers'
 gem 'bootstrap-sass'
 gem 'handlebars_assets'
-gem 'paperclip'
+gem "paperclip", github: 'thoughtbot/paperclip'
 gem 'aws-sdk'
 

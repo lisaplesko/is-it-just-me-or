@@ -113,6 +113,16 @@ body.login-page {
   margin-bottom: 5px;
 }
 
+.post-photo {
+  margin: 10px 0;
+  float: left;
+  margin-right: 15px;
+}
+
+.well {
+  clear: left;
+}
+
 
 @media (max-width: 700px) {
   .post-container {

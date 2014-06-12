@@ -14,17 +14,19 @@
       <%= @post.title %>
     </div>
     <div class="post-body">
+      <%= image_tag @post.image.url(:square), class: "post-photo" %>
       <%= @post.body.html_safe %>
     </div>
 
 
-  <div class="well">
 
-    <% @post.comments.each do |comment| %>
-      <div><%= comment.body %> <small class='small-text'> posted by </small><%= comment.user.first_name %></div>
-    <% end %>
+    <div class="well">
 
-  </div>
+      <% @post.comments.each do |comment| %>
+        <div><%= comment.body %> <small class='small-text'> posted by </small><%= comment.user.first_name %></div>
+      <% end %>
+
+    </div>
 
 
 
