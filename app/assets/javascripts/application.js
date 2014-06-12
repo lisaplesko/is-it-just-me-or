@@ -16,9 +16,3 @@
 //= require medium-editor
 //= require_tree ./templates
 //= require_tree .
-
-$(document).ready(function(){
-  setTimeout(function() {
-    $(".flash_notice").fadeOut();
-  }, 2000);
-});
