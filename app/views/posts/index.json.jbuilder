@@ -3,6 +3,7 @@ json.array!(@posts) do |post|
   json.post_url post_url(post, format: :json)
   json.username post.user.username
   json.user_url user_url(post.user_id)
+  json.reading_time post.reading_time
 
   json.comments post.comments.each do |comment|
     json.extract! comment, :id, :body, :created_at, :updated_at
