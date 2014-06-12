@@ -43,4 +43,7 @@ Rails.application.configure do
       secret_access_key: ENV['AWS_SECRET_ACCESS_KEY']
     }
   }
+
+
+
 end

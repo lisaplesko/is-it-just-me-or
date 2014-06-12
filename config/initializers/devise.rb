@@ -230,10 +230,25 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
-  config.omniauth :facebook, ENV['FACEBOOK_KEY'], ENV['FACEBOOK_SECRET']
 
-  require 'omniauth-google-oauth2'
-  config.omniauth :google_oauth2, ENV['GOOGLE_KEY'], ENV['GOOGLE_SECRET'], { access_type: "offline", approval_prompt: "" }
+
+  if Rails.env.production?
+
+    config.omniauth :facebook, ENV['FACEBOOK_KEY'], ENV['FACEBOOK_SECRET']
+
+    require 'omniauth-google-oauth2'
+    config.omniauth :google_oauth2, ENV['GOOGLE_KEY'], ENV['GOOGLE_SECRET'], { access_type: "offline", approval_prompt: "" }
+
+  elsif Rails.env.development?
+
+    config.omniauth :facebook, ENV['TEST_FACEBOOK_KEY'], ENV['TEST_FACEBOOK_SECRET']
+
+    require 'omniauth-google-oauth2'
+    config.omniauth :google_oauth2, ENV['TEST_GOOGLE_KEY'], ENV['TEST_GOOGLE_SECRET'], { access_type: "offline", approval_prompt: "" }
+
+  end
+
+
 
 
   # ==> Warden configuration
