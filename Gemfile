@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.1.1'
 
 # Default gems from rails new
 gem 'rails', '4.1.1'
@@ -12,8 +13,8 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 # Added gems
-gem 'pry-rails', group: :development
-gem 'pry-nav', group: :development
+gem 'pry-rails'
+gem 'pry-nav'
 gem 'devise'
 gem 'dotenv-rails'
 gem 'omniauth-facebook'
