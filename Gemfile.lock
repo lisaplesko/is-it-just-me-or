@@ -1,3 +1,13 @@
+GIT
+  remote: git://github.com/thoughtbot/paperclip.git
+  revision: 73fd316733325c8de2f16e5f3655b4938dfb156e
+  specs:
+    paperclip (4.1.1)
+      activemodel (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      cocaine (~> 0.5.3)
+      mime-types
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -14,6 +24,8 @@ GEM
       activesupport (= 4.1.1)
       builder (~> 3.1)
       erubis (~> 2.7.0)
+    active_model_serializers (0.8.1)
+      activemodel (>= 3.0)
     activemodel (4.1.1)
       activesupport (= 4.1.1)
       builder (~> 3.1)
@@ -28,8 +40,17 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
+    aws-sdk (1.42.0)
+      json (~> 1.4)
+      nokogiri (>= 1.4.4)
     bcrypt (3.1.7)
+    bootstrap-sass (3.1.1.1)
+      sass (~> 3.2)
     builder (3.2.2)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.4)
+      climate_control (>= 0.0.3, < 1.0)
     coderay (1.1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -51,12 +72,19 @@ GEM
       dotenv (= 0.11.1)
     erubis (2.7.0)
     execjs (2.2.0)
+    faker (1.3.0)
+      i18n (~> 0.5)
     faraday (0.9.0)
       multipart-post (>= 1.2, < 3)
+    handlebars_assets (0.16)
+      execjs (>= 1.2.9)
+      multi_json
+      sprockets (>= 2.0.3)
+      tilt
     hashie (2.1.1)
     hike (1.2.3)
     i18n (0.6.9)
-    jbuilder (2.0.8)
+    jbuilder (2.1.0)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
     jquery-rails (3.1.0)
@@ -67,12 +95,17 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    medium-editor-rails (0.9.3)
+      railties (>= 3.0)
     method_source (0.8.2)
     mime-types (1.25.1)
+    mini_portile (0.6.0)
     minitest (5.3.4)
     multi_json (1.10.1)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
+    nokogiri (1.6.2.1)
+      mini_portile (= 0.6.0)
     oauth2 (0.9.4)
       faraday (>= 0.8, < 0.10)
       jwt (~> 1.0)
@@ -83,6 +116,9 @@ GEM
       hashie (>= 1.2, < 3)
       rack (~> 1.0)
     omniauth-facebook (1.6.0)
+      omniauth-oauth2 (~> 1.1)
+    omniauth-google-oauth2 (0.2.4)
+      omniauth (~> 1.0)
       omniauth-oauth2 (~> 1.1)
     omniauth-oauth2 (1.1.2)
       faraday (>= 0.8, < 0.10)
@@ -147,8 +183,6 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
-    turbolinks (2.2.2)
-      coffee-rails
     tzinfo (1.2.1)
       thread_safe (~> 0.1)
     uglifier (2.5.0)
@@ -161,12 +195,20 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_model_serializers
+  aws-sdk
+  bootstrap-sass
   coffee-rails (~> 4.0.0)
   devise
   dotenv-rails
+  faker
+  handlebars_assets
   jbuilder (~> 2.0)
   jquery-rails
+  medium-editor-rails
   omniauth-facebook
+  omniauth-google-oauth2
+  paperclip!
   pg
   pry-nav
   pry-rails
@@ -174,5 +216,4 @@ DEPENDENCIES
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   spring
-  turbolinks
   uglifier (>= 1.3.0)

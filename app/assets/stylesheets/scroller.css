@@ -1,0 +1,151 @@
+#scroll-section {
+  padding-top: 35px;
+  background-attachment: inherit;
+  position: float;
+  background: url(http://floydsproduce.com/blog/wp-content/uploads/2013/03/Wood-Texture-wood-texture-1920x1080-1.jpg) 50% 0 repeat fixed;
+  /*http://www.jodihelmer.com/wordpress/wp-content/uploads/2014/01/desk-and-typewriter.jpg*/
+  /*http://petenowak2000.files.wordpress.com/2014/04/typewriter.jpg*/
+  /*http://dogknobit.com/wp-content/uploads/2014/03/holli-typejunkie.jpg*/
+  /*http://www.slashgear.com/wp-content/uploads/2008/11/datamancer_ergo_keyboard_4.jpg*/
+  /*http://gadgets.boingboing.net/gimages/eoodkeyboard.jpg*/
+  /*http://i0.wp.com/theultralinx.com/wp-content/uploads/2013/09/Oree-Board-Wooden-Keyboard-3.jpeg*/
+  /*http://www.wildtextures.com/wp-content/uploads/2011/11/wildtextures-dark-wood-board.jpg*/
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin-bottom: -4em;
+}
+
+#scroll-section a:link, a:visited, a:active {
+  color: #aaaaaa;
+}
+
+#scroll-section a:hover {
+  color: #aaaaaa;
+}
+
+#category-name a:link, a:visited, a:active {
+  color: black;
+}
+
+.scrollback {
+  background: url(http://floydsproduce.com/blog/wp-content/uploads/2013/03/Wood-Texture-wood-texture-1920x1080-1.jpg) 50% 0 repeat fixed;
+  height: auto;
+  margin: 0 auto;
+  width: 50%;
+  max-width: 1920px;
+  position: relative;
+  text-align: center;
+}
+
+.scrollbreak span {
+    background-color: black;
+}
+
+.scrollbreak {
+  border: 2px solid;
+  border-radius: 25px;
+  background: url(http://aveyotech.com/wp-content/uploads/2014/03/brushed-aluminum.jpg)  0 repeat fixed; min-height: 50px;
+  height: 40px;
+  background-position: right;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  width: 50%;
+  margin: 0 auto;
+  max-width: 1920px;
+  position: relative;
+  -webkit-box-shadow: 0 0 50px rgba(0,0,0,0.8);
+  box-shadow: 0 0 50px rgba(0,0,0,0.8);
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.scrollbreak a:link, a:visited, a:active {
+  position: float;
+/*background: url(http://floydsproduce.com/blog/wp-content/uploads/2013/03/Wood-Texture-wood-texture-1920x1080-1.jpg) 50% 0 repeat fixed;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;*/
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-stroke-width: 5.3px;
+  -webkit-stroke-color: #FFFFFF;
+  -webkit-fill-color: #FFFFFF;
+  text-shadow: 3px 3px 80px black;
+  -webkit-transition: width 0.3s; /*Safari & Chrome*/
+  transition: width 0.3s;
+  -moz-transition: width 0.3s; /* Firefox 4 */
+  -o-transition: width 0.3s; /* Opera */
+  outline-color: white;
+}
+
+/* mouse over link */
+.scrollbreak a:hover {
+  font-size: 20px;
+  position: float;
+  background: url(http://www.wildtextures.com/wp-content/uploads/2012/02/wildtextures_dark_wood_glossy_floor.jpg) 50% 0 repeat fixed;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-stroke-width: 5.3px;
+  -webkit-stroke-color: #FFFFFF;
+  -webkit-fill-color: #FFFFFF;
+  text-shadow: 0px 4px 35px white;
+  -webkit-transition: width 0.3s; /*Safari & Chrome*/
+  transition: width 0.3s;
+  -moz-transition: width 0.3s; /* Firefox 4 */
+  -o-transition: width 0.3s; /* Opera */
+}
+
+.single-post {
+  margin: -20px 0 0 0;
+  text-align: left;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #000;
+  margin: 1em 0;
+  padding: 0;
+  border-color: white;
+  background-color: white;
+  color: white;
+}
+
+.container hr {
+margin: 2px 0;
+}
+
+.text-in-post {
+  color: white;
+
+}
+
+blockquote {
+  margin-left: 25px;
+  margin-top: 25px;
+  margin-bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+blockquote:before {
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+blockquote p {
+  display: inline;
+}

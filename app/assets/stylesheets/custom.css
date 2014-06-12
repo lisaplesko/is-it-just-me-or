@@ -1,0 +1,144 @@
+.title-input-field {
+  border: 0px;
+  background: transparent;
+  font-size: 45px;
+  font-family: "jaf-bernino-sans", sans-serif;
+  font-weight: bold;
+}
+
+[contenteditable=true]:focus,
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+[contenteditable=true]:empty:before{
+  content: attr(placeholder);
+  font-family: "jaf-bernino-sans", sans-serif;
+  color: gray;
+  font-style: italic;
+  font-size: 17px;
+}
+
+.post-body {
+  min-height: 100px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-family: "jaf-bernino-sans", sans-serif;
+  font-size: 17px;
+}
+
+.status {
+  min-height: 20px;
+  font-style: italic;
+  color: gray;
+  text-align: right;
+}
+
+.outline-button {
+  background: rgba(0,0,0,0.1);
+  border-radius: 15px;
+  padding: 10px;
+  color: black;
+}
+
+.outline-button:hover {
+  text-decoration: none;
+}
+
+.post-container {
+  width: 50%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.comments-container {
+  margin: 20px 0;
+}
+
+.settings {
+  width: 30px;
+  position: absolute;
+  right: 0px;
+  top: 40px;
+  background-image: url("http://i.imgur.com/pmnMgqX.png");
+}
+
+
+body.login-page {
+ background: url('http://www.jodihelmer.com/wordpress/wp-content/uploads/2014/01/desk-and-typewriter.jpg') no-repeat center center fixed;
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+}
+
+
+.panel-default {
+ opacity: 0.9;
+ margin-top:30px;
+}
+
+.panel-body {
+  margin-top: 5px;
+  background: rgba(0,0,0,0.5);
+  border-radius: 15px;
+  margin: 0 auto;
+}
+
+.form-group.last {
+ margin-bottom:0px;
+}
+
+.login-header {
+  font-size: 50px;
+  color: white;
+  text-shadow: 1px 1px 1px #000;
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: "ff-prater-script-web", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.panel-heading {
+  text-align: right;
+}
+
+.btn-large {
+  padding: 20px !important;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.post-photo {
+  margin: 10px 0;
+  float: left;
+  margin-right: 15px;
+}
+
+.well {
+  clear: left;
+}
+
+
+@media (max-width: 700px) {
+  .post-container {
+    width: 90%;
+  }
+
+}
+.author{
+  margin-left: 30px;
+}
+.small-text{
+  font-family: 'Dancing Script', cursive;
+  font-size: 14px;
+}
+
+/* Resource for placeholder in editable div
+http://blogs.teamb.com/craigstuntz/2013/01/29/38734/
+*/
+

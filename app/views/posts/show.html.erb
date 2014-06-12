@@ -1,25 +1,57 @@
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+<div class="container">
+<%= render 'photo_header' %>
 
-<p>
-  <strong>Body:</strong>
-  <%= @post.body %>
-</p>
+  <div class="post-container" >
+  <% @post.increment_counter %>
 
-<%= @post.comments.first.user.email %>
+    <% if @post.user == current_user %>
+    <%= render 'settings' %>
+    <!-- <img src="http://i.imgur.com/pmnMgqX.png" class="settings"> -->
+    <% end %>
 
-<ul>
-  <% @post.comments.each do |comment| %>
-    <li><%= comment.body %>|<%= comment.user%></li>
-  <% end %>
-</ul>
+    <div class="status"></div>
 
-<% if @post.user == current_user %>
-  <%= link_to 'Edit', edit_post_path(@post) %> |
-<% end %>
+    <div class="title-input-field">
+      <%= @post.title %>
+    </div>
+    <div class="post-body">
+      <%= image_tag @post.image.url(:square), class: "post-photo" %>
+      <%= @post.body.html_safe %>
+    </div>
 
-<%= link_to 'Back', posts_path %>
 
-<%= render 'comments/form' %>
+
+    <div class="well">
+
+      <% @post.comments.each do |comment| %>
+        <div><%= comment.body %> <small class='small-text'> posted by </small><%= comment.user.first_name %></div>
+      <% end %>
+
+    </div>
+
+
+
+
+  <div class="comments-container">
+    <%= render 'comments/form' %>
+  </div>
+
+  <div class="post-buttons">
+
+    <%= link_to '< Back', user_posts_path(@post.user), class: "outline-button", role: "button"  %>
+
+    <% if @post.user == current_user %>
+      <%= link_to 'Edit this post', edit_post_path(@post), class: "outline-button" %>
+    <% end %>
+
+    <% if @post.user == current_user %>
+      <%= link_to 'Delete this post', @post, method: :delete, data: { confirm: 'Are you sure?' }, class: "outline-button" %>
+    <% end %>
+
+
+
+  </div>
+
+
+
+</div>

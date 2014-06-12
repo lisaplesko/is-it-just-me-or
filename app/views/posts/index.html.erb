@@ -1,33 +1,32 @@
-<h1>Listing posts</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th>Author</th>
-      <th colspan="2"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= link_to post.title, post %></td>
-        <td><%= post.body %></td>
-        <td><%= post.user.email %></td>
-
-
-
-        <% if post.user == current_user %>
-          <td><%= link_to 'Edit', edit_post_path(post) %></td>
-          <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }%></td>
+<div class='container'>
+  <div class='row'>
+    <div class='col-md-12 top-image'>
+      <div class='background-image'></div>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-md-3'>
+      <div class="profile-pic-container"><img class='profile-pic' src=<%= @posts.first.user.profile_url %> /></div>
+      <div class='new-post'>
+        <% if current_user == @posts.first.user %>
+          <%= link_to 'New Post', new_user_post_path(current_user), class: 'outline-button' %>
         <% end %>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Post', new_post_path %>
+      </div>
+    </div>
+    <div class='col-md-7'>
+      <div id='blog-title'>
+        <h1 id='title'>Is It Just Me, Or...</h1>
+      </div>
+      <div class='panel panel-default'>
+        <% @posts.each do |post| %>
+          <div class='post' id=<%=post.id%>>
+            <h4><%= link_to post.title, post_path(post), class: 'post-title' %></h4>
+            <div class='body-text'>
+              <p><%= post.body %></p>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

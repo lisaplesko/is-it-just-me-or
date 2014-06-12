@@ -12,4 +12,36 @@
  *
  *= require_tree .
  *= require_self
+ *= require medium-editor/medium-editor
  */
+
+body {
+  padding-top: 50px;
+  padding-bottom:  50px;
+}
+
+li.user-name{
+  float: right;
+}
+.mini-profile-pic{
+  max-width: 50px;
+}
+.mini-profile-pic-container{
+  height: 50px;
+  width: 50px;
+  overflow: hidden;
+  float: right;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+.flash_notice{
+  position: fixed;
+  top: 130px;
+  right: 50px;
+  width: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+  background-color: rgba(1,1,1,0.4)
+}
