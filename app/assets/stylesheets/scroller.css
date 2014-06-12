@@ -10,6 +10,7 @@
   /*http://gadgets.boingboing.net/gimages/eoodkeyboard.jpg*/
   /*http://i0.wp.com/theultralinx.com/wp-content/uploads/2013/09/Oree-Board-Wooden-Keyboard-3.jpeg*/
   /*http://www.wildtextures.com/wp-content/uploads/2011/11/wildtextures-dark-wood-board.jpg*/
+  /*http://designcalorie.com/wp-content/uploads/2013/03/Tea-Stained-Paper-640x320.jpg*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -32,7 +33,7 @@
 }
 
 .scrollback {
-  background: url(http://floydsproduce.com/blog/wp-content/uploads/2013/03/Wood-Texture-wood-texture-1920x1080-1.jpg) 50% 0 repeat fixed;
+  background: url(http://designcalorie.com/wp-content/uploads/2013/03/Tea-Stained-Paper-640x320.jpg) 50% 0 repeat fixed;
   height: auto;
   margin: 0 auto;
   width: 50%;
@@ -67,10 +68,11 @@
 }
 
 .scrollbreak a:link, a:visited, a:active {
+  color: aaaaaa;
   position: float;
-/*background: url(http://floydsproduce.com/blog/wp-content/uploads/2013/03/Wood-Texture-wood-texture-1920x1080-1.jpg) 50% 0 repeat fixed;
+background: url(http://floydsproduce.com/blog/wp-content/uploads/2013/03/Wood-Texture-wood-texture-1920x1080-1.jpg) 50% 0 repeat fixed;
 -webkit-background-clip: text;
--webkit-text-fill-color: transparent;*/
+-webkit-text-fill-color: transparent;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
