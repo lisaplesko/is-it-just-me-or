@@ -55,7 +55,6 @@ class Post < ActiveRecord::Base
     if(word_count > 200)
       minutes = word_count / 200
       seconds = (word_count % 200) / (200.0 / 60.0).round
-      binding.pry
       minutes.to_s.concat(" Minute".pluralize(minutes)) + ' ' + seconds.to_s.concat(" Second".pluralize(seconds))
     else
       seconds = ((word_count % 200) / (200.0 / 60.0)).round
