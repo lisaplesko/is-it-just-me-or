@@ -1,4 +1,4 @@
-var BlogApp = BlogApp || {}
+var BlogApp = BlogApp || {};
 
 BlogApp.doneTypingInterval = 1200;
 

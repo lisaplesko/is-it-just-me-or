@@ -1,4 +1,4 @@
-var BlogApp = BlogApp || {}
+var BlogApp = BlogApp || {};
 
 $(document).ready(function() {
   BlogApp.header = new Headroom(document.querySelector(".navbar-fixed-top"), {

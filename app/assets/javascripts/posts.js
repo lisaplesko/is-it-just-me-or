@@ -1,12 +1,11 @@
+var BlogApp = BlogApp || {};
+
+BlogApp.bodyFade = function(){
+  $(this).children('.body-text').fadeToggle('slow');
+};
+
 $(document).ready(function(){
   //hides post body on load
   $('.post').children('.body-text').hide();
-  $('.panel').on('click', '.post', Post.bodyFade);
+  $('.panel').on('click', '.post', BlogApp.bodyFade);
 });
-
-
-var Post = {
-  bodyFade: function(){
-    $(this).children('.body-text').fadeToggle('slow');
-  }
-};
