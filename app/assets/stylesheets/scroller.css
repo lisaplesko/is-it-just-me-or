@@ -1,5 +1,5 @@
 #scroll-section {
-  padding-top: 35px;
+  padding-top: 25px;
   background-attachment: inherit;
   position: float;
   background: url(http://floydsproduce.com/blog/wp-content/uploads/2013/03/Wood-Texture-wood-texture-1920x1080-1.jpg) 50% 0 repeat fixed;
@@ -19,6 +19,19 @@
   height: auto !important;
   height: 100%;
   margin-bottom: -4em;
+}
+
+#home-index{
+  background: url(http://floydsproduce.com/blog/wp-content/uploads/2013/03/Wood-Texture-wood-texture-1920x1080-1.jpg) 50% 0 repeat fixed;
+}
+
+.login-header {
+  padding: 35px !important;
+  margin: 0 auto;
+  width: 75%;
+  text-align: left;
+  color: white;
+  margin-bottom: 25px;
 }
 
  a {
@@ -44,10 +57,10 @@
 }
 
 .scrollbreak {
-  border: 0px solid;
   border-radius: 25px;
-  background: url(http://aveyotech.com/wp-content/uploads/2014/03/brushed-aluminum.jpg)  0 repeat fixed; min-height: 50px;
-  height: 40px;
+  background: black;
+  /*background: url(http://aveyotech.com/wp-content/uploads/2014/03/brushed-aluminum.jpg)  0 repeat fixed; min-height: 50px;*/
+  height: 50px;
   background-position: right;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -115,10 +128,8 @@ h5 {
 }
 
 blockquote {
-  margin-left: 25px;
-  margin-top: 30px;
-  margin-bottom: 0;
   background: rgba(0, 0, 0, 0.5);
+  border: 0px !important;
 }
 
 blockquote:before {
