@@ -30,7 +30,7 @@
 
 
 </head>
-  <body>
+  <body class="<%= controller_name %> <%= action_name %>">
     <div class='app-messages'>
       <% flash.each do |name, msg| %>
         <% if msg.is_a?(String) %>

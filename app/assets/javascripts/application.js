@@ -14,5 +14,6 @@
 //= require jquery_ujs
 //= require handlebars
 //= require medium-editor
+//= require jquery-readyselector
 //= require_tree ./templates
 //= require_tree .
