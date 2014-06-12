@@ -11,6 +11,7 @@
   /*http://i0.wp.com/theultralinx.com/wp-content/uploads/2013/09/Oree-Board-Wooden-Keyboard-3.jpeg*/
   /*http://www.wildtextures.com/wp-content/uploads/2011/11/wildtextures-dark-wood-board.jpg*/
   /*http://designcalorie.com/wp-content/uploads/2013/03/Tea-Stained-Paper-640x320.jpg*/
+  /*http://brent-baldwin.com/wp-content/uploads/2013/01/typewriter_hammers2.jpg*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -20,20 +21,29 @@
   margin-bottom: -4em;
 }
 
-#scroll-section a:link, a:visited, a:active {
-  color: #aaaaaa;
+#scroll-section a:link {
+  color: white !important;
+}
+#scroll-section a:visited {
+  color: white !important;
+}
+#scroll-section a:active {
+  color: white !important;
 }
 
 #scroll-section a:hover {
-  color: #aaaaaa;
+  color: white;
 }
 
-#category-name a:link, a:visited, a:active {
-  color: black;
+.text-in-post a:link, a:visited, a:active {
+  color: white !important;
 }
 
 .scrollback {
-  background: url(http://designcalorie.com/wp-content/uploads/2013/03/Tea-Stained-Paper-640x320.jpg) 50% 0 repeat fixed;
+  background: url(http://brent-baldwin.com/wp-content/uploads/2013/01/typewriter_hammers2.jpg) 50% repeat fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   height: auto;
   margin: 0 auto;
   width: 50%;
@@ -68,7 +78,7 @@
 }
 
 .scrollbreak a:link, a:visited, a:active {
-  color: aaaaaa;
+  color: white;
   position: float;
 background: url(http://floydsproduce.com/blog/wp-content/uploads/2013/03/Wood-Texture-wood-texture-1920x1080-1.jpg) 50% 0 repeat fixed;
 -webkit-background-clip: text;
@@ -130,7 +140,6 @@ margin: 2px 0;
 
 .text-in-post {
   color: white;
-
 }
 
 blockquote {
