@@ -17,7 +17,7 @@ $(document).ready(function(){
 
   //setup before functions
   var typingTimer;                //timer identifier
-  var doneTypingInterval = 2000;  //time in ms, 5 second for example
+  var doneTypingInterval = 1200;  //time in ms, 5 second for example
 
   //on keyup, start the countdown
   $('.title-input-field, .editable').keyup(function(){
