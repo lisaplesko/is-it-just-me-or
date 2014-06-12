@@ -11,26 +11,65 @@ $(document).ready(function(){
 
   $('#scroll-section').scroll(updateText);
 
-  // // Code from internet for parallax -- doesnt seem to work
-  // var $window = $(window);
-
-  // $('section[data-type="background"]').each(function(){
-  //   var $bgobj = $(this); // assigning the object
-  //   $(window).scroll(function() {
-  //     var yPos = -($window.scrollTop() / $bgobj.data('speed'));
-  //     // Put together our final background position
-  //     var coords = '50% '+ yPos + 'px';
-  //     // Move the background
-  //     $bgobj.css({ backgroundPosition: coords });
-  //   });
-  // });
-
-// Working
-$.ajax({
-  url: '/categories/top8'
-})
-  .done(appendTop8);
+  $.ajax({
+    url: '/categories.json'
+  })
+  .done(calculateTop8);
 });
+
+var insertCategorySection = function(posts, count){
+  $('#scroll-section').append("<section class='scrollback' id='scroll" + count + "' data-type='background' data-speed='10'>");
+  for(var i = 0; i < posts.length; i++){
+    $('#scroll' + count).append(generatePostHTML(posts[i]));
+    $('#scroll').append("<div class='.row'><div class='span12'><hr></div></div>");
+  }
+};
+
+var generatePostHTML = function(post){
+  return HandlebarsTemplates['posts/show'](post);
+};
+
+var insertScrollBreakSection = function(category){
+  var scrollbreak_html = HandlebarsTemplates['scroller/break'](category);
+  $('#scroll-section').append(scrollbreak_html);
+};
+
+var appendTop8 = function(topCategories){
+  for(var i = 0; i < topCategories.length; i++){
+    insertScrollBreakSection(topCategories[i]);
+    insertCategorySection(getTop4Posts(topCategories[i]), i);
+  }
+};
+
+var calculateTop8 = function(categories){
+  categories.sort(function (a, b) {
+    if (a.category_score < b.category_score){
+      return 1;
+    } else if (a.category_score > b.category_score){
+      return -1;
+    } else {
+      return 0;
+    }
+  });
+  categories.length = 8;
+  appendTop8(categories);
+};
+
+var getTop4Posts = function(category){
+  var top4Posts = category.posts.sort(function (a, b) {
+    if (a.post_score < b.post_score){
+      return 1;
+    } else if (a.post_score > b.post_score){
+      return -1;
+    } else {
+      return 0;
+    }
+  });
+  if(top4Posts.length > 4){
+    top4Posts.length = 4;
+  }
+  return top4Posts;
+};
 
 // Experimental
 // $.ajax({
@@ -38,8 +77,6 @@ $.ajax({
 // })
 //   .done(displayOne);
 // });
-
-
 
 var displayOne = function(categories){
   insertScrollBreakSection(categories[0]);
@@ -60,30 +97,6 @@ var updateText = function(event){
 
   $('#scroll-section').css('top', calcTop);
 
-};
-
-var insertCategorySection = function(category, count){
-  $('#scroll-section').append("<section class='scrollback' id='scroll" + count + "' data-type='background' data-speed='10'>");
-  for(var i = 0; i < category.posts.length; i++){
-    $('#scroll' + count).append(generatePostHTML(category.posts[i]));
-    $('#scroll').append("<div class='.row'><div class='span12'><hr></div></div>");
-  }
-};
-
-var generatePostHTML = function(post){
-  return HandlebarsTemplates['posts/show'](post);
-};
-
-var insertScrollBreakSection = function(category){
-  var scrollbreak_html = HandlebarsTemplates['scroller/break'](category);
-  $('#scroll-section').append(scrollbreak_html);
-};
-
-var appendTop8 = function(categories){
-  for(i = 0; i < categories.length; i++){
-    insertScrollBreakSection(categories[i]);
-    insertCategorySection(categories[i], i);
-  }
 };
 
 

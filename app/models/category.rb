@@ -19,12 +19,16 @@ class Category < ActiveRecord::Base
     end
 
     def self.top_8
-      Category.includes(:posts).limit(8) #return AR association
+      Category.limit(8)
     end
 
-    def rank_post
-      # Algorithm code for ranking posts
-      # view_count + comments + (comments/view_count * modifier)
+    def rank_category(category)
+    # Algorithm code for ranking category
+      total_score = 0
+      category.posts.each do |post|
+        total_score += post.rank_post(post)
+      end
+      total_score
     end
 
 end
