@@ -41,18 +41,19 @@ class Post < ActiveRecord::Base
   def reading_time
     word_count = self.body.split(' ').count
     minutes = word_count / 200
-    seconds = word_count % 200 / (200 / 60)
-    return (minutes * 60) + seconds
+    seconds = word_count % 200 / (200.0 / 60.0)
+    (minutes * 60) + seconds
   end
 
   def time_to_s
     word_count = self.body.split(' ').count
-    minutes = word_count / 200
-    seconds = word_count % 200 / (200 / 60)
-    if(minutes == 0)
-      return "#{seconds} seconds"
+    if(word_count > 200)
+      minutes = word_count / 200
+      seconds = (word_count % 200) / (200.0 / 60.0)
+      "#{minutes} Minutes #{seconds} Seconds"
     else
-      return "#{minutes} Minutes #{seconds} Seconds"
+      seconds = ((word_count % 200) / (200.0 / 60.0)).round
+      "#{seconds} seconds"
     end
   end
 

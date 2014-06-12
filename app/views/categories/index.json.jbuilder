@@ -10,6 +10,8 @@ json.array!(@categories) do |category|
     json.body_summary post.body_summary
     json.user_url user_url(post.user_id)
     json.post_score post.rank_post(post)
+    json.post_reading_time post.reading_time
+    json.post_time_to_s post.time_to_s
   end
 
 end
