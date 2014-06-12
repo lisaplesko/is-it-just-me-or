@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.1.1'
 
 # Default gems from rails new
 gem 'rails', '4.1.1'
