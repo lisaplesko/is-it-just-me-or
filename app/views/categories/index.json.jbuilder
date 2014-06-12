@@ -12,6 +12,7 @@ json.array!(@categories) do |category|
     json.post_score post.rank_post(post)
     json.post_reading_time post.reading_time
     json.post_time_to_s post.time_to_s
+    json.comments_count post.comments.count
   end
 
 end
