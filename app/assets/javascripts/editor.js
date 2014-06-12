@@ -15,10 +15,33 @@ BlogApp.doneTyping = function() {
   BlogApp.saveToForm();
 };
 
+BlogApp.putCursorBack = function(){
+  caretPos = 100000000000000000000;
+  var elem = document.getElementById('#editor');
+
+  if(elem !== null) {
+    if(elem.createTextRange) {
+      var range = elem.createTextRange();
+      range.move('character', caretPos);
+      range.select();
+    }
+    else {
+      if(elem.selectionStart) {
+        elem.focus();
+        elem.setSelectionRange(caretPos, caretPos);
+      }
+      else {
+        elem.focus();
+      }
+    }
+  }
+};
+
 BlogApp.saveToForm = function() {
   var content = $('#editor').html(); // Change to .text? - Ethan
   $("#post_body").val(content); // drop it into a hidden input field
   $("#new_post").submit();
+  BlogApp.putCursorBack();
 };
 
 BlogApp.getUpdates = function() {
