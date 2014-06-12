@@ -39,30 +39,40 @@
       <% end %>
     </div>
     <div class='container'>
-      <div class='navbar-collapse navbar-inverse navbar-fixed-top'>
-          <% if user_signed_in? %>
-            <ul class='nav navbar-nav pull-left'>
-              <li><%= link_to "IIJMO", root_path %></li>
-              <li><%= link_to 'Edit profile', edit_user_registration_path %></li>
-              <li><%= link_to "Logout", destroy_user_session_path %></li>
-            </ul>
-            <div>
-              <div class="mini-profile-pic-container"><img class='mini-profile-pic' src=<%= current_user.profile_url %> /></div>
-            </div>
-            <ul class='nav navbar-nav pull-right'>
-              <li><%= link_to 'New Post', new_user_post_path(current_user)%></li>
-              <li><%= link_to current_user.first_name, user_posts_path(current_user, class: 'user-name')%></li>
-            </ul>
-          <% else %>
-            <ul class='nav navbar-nav pull-left'>
-              <li><%= link_to "IIJMO", root_path %></li>
-              <li><%= link_to "Login", new_user_session_path %></li>
-            </ul>
-          <% end %>
-        </ul>
-      </div>
+      <nav class='navbar navbar-inverse navbar-fixed-top'>
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-9">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <%= link_to "IIJMO", root_path, class: "navbar-brand" %>
+          </div>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
+            <% if user_signed_in? %>
+              <ul class="nav navbar-nav">
+                <li><%= link_to "Logout", destroy_user_session_path %></li>
+              </ul>
+              <div>
+                <div class="mini-profile-pic-container"><img class='mini-profile-pic' src=<%= current_user.profile_url %> /></div>
+              </div>
+              <ul class='nav navbar-nav pull-right'>
+                <li><%= link_to 'New Post', new_user_post_path(current_user)%></li>
+                <li><%= link_to current_user.first_name, user_posts_path(current_user, class: 'user-name')%></li>
+              </ul>
+            <% else %>
+              <ul class='nav navbar-nav pull-left'>
+                <li><%= link_to "Login", new_user_session_path %></li>
+              </ul>
+            <% end %>
+          </div>
+        </div>
+      </nav>
     </div>
 
     <%= yield %>
+
   </body>
 </html>
