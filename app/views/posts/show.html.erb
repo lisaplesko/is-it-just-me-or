@@ -3,9 +3,12 @@
 
   <div class="post-container" >
   <% @post.increment_counter %>
+    <div class='twitter-button'>
+      <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    </div>
 
     <% if @post.user == current_user %>
-    <%= render 'settings' %>
     <!-- <img src="http://i.imgur.com/pmnMgqX.png" class="settings"> -->
     <% end %>
 
@@ -15,11 +18,11 @@
       <%= @post.title %>
     </div>
     <div class="post-body">
-      <%= image_tag @post.image.url(:square), class: "post-photo" %>
+      <% if @post.image_updated_at.present? %>
+        <%= image_tag @post.image.url(:square), class: "post-photo" %>
+      <% end %>
       <%= @post.body.html_safe %>
     </div>
-
-
 
     <div class="well">
 
@@ -29,21 +32,15 @@
 
     </div>
 
-
-
-
   <div class="comments-container">
     <%= render 'comments/form' %>
   </div>
 
   <div class="post-buttons">
-
     <%= link_to '< Back', user_posts_path(@post.user), class: "outline-button", role: "button"  %>
-
     <% if @post.user == current_user %>
       <%= link_to 'Edit this post', edit_post_path(@post), class: "outline-button" %>
     <% end %>
-
     <% if @post.user == current_user %>
       <%= link_to 'Delete this post', @post, method: :delete, data: { confirm: 'Are you sure?' }, class: "outline-button" %>
     <% end %>

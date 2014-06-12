@@ -1,7 +1,19 @@
 class Post < ActiveRecord::Base
+# require 'active_support/inflector'
+# require 'active_support/core_ext/string'
   has_many :comments
   belongs_to :user
   belongs_to :category
+  has_attached_file :image, styles: {
+    thumb: '100x100>',
+    square: '200x200#',
+    medium: '300x300>'
+  },
+  default_url: '/images/:style/missing.png'
+
+  # def pluralize
+  #   ActiveSupport::Inflector.pluralize(self)
+  # end
 
   def self.count_comments
     self.comments.count
@@ -10,13 +22,6 @@ class Post < ActiveRecord::Base
   def body_summary
     self.body.split(/[.?!]/)[0].concat('...')
   end
-
-  has_attached_file :image, styles: {
-    thumb: '100x100>',
-    square: '200x200#',
-    medium: '300x300>'
-  },
-  default_url: '/images/:style/missing.png'
 
   # Validate the attached image is image/jpg, image/png, etc
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
@@ -42,18 +47,19 @@ class Post < ActiveRecord::Base
     word_count = self.body.split(' ').count
     minutes = word_count / 200
     seconds = word_count % 200 / (200.0 / 60.0)
-    (minutes * 60) + seconds
+    ((minutes * 60) + seconds).round
   end
 
   def time_to_s
     word_count = self.body.split(' ').count
     if(word_count > 200)
       minutes = word_count / 200
-      seconds = (word_count % 200) / (200.0 / 60.0)
-      "#{minutes} Minutes #{seconds} Seconds"
+      seconds = (word_count % 200) / (200.0 / 60.0).round
+      binding.pry
+      minutes.to_s.concat(" Minute".pluralize(minutes)) + ' ' + seconds.to_s.concat(" Second".pluralize(seconds))
     else
       seconds = ((word_count % 200) / (200.0 / 60.0)).round
-      "#{seconds} seconds"
+      seconds.to_s.concat(" Second".pluralize(seconds))
     end
   end
 

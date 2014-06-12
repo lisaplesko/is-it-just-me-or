@@ -6,8 +6,8 @@
     <div class="status"></div>
     <div id="new-post-form">
       <%= form_for @post, html: { multipart: true } do |f| %>
-        <%= f.text_field :title,
-                          placeholder: "title", class: "title-input-field" %>
+        <%= f.text_area :title,
+                        placeholder: "title", class: "title-input-field" %>
 
         <%= f.hidden_field :body %>
 
