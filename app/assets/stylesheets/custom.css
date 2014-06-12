@@ -126,20 +126,35 @@ button:focus {
   clear: left;
 }
 
+.p-background-image {
+  font-size: 70px;
+  text-align: center;
+  padding-top: 50px;
+  font-family: "ff-prater-script-web", sans-serif;
+  color: rgba(0,0,0,0.7);
+  text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+}
+
+.author{
+    margin-left: 30px;
+  }
+
+.small-text{
+  font-family: 'Dancing Script', cursive;
+  font-size: 14px;
+}
+
 
 @media (max-width: 700px) {
   .post-container {
     width: 90%;
   }
 
+  .p-background-image {
+    font-size: 40px;
+  }
 }
-.author{
-  margin-left: 30px;
-}
-.small-text{
-  font-family: 'Dancing Script', cursive;
-  font-size: 14px;
-}
+
 
 /* Resource for placeholder in editable div
 http://blogs.teamb.com/craigstuntz/2013/01/29/38734/
