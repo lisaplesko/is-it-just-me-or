@@ -46,8 +46,8 @@
 }
 
 .scrollbreak {
-  border: 2px solid;
-  border-radius: 25px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
   background: url(http://aveyotech.com/wp-content/uploads/2014/03/brushed-aluminum.jpg)  0 repeat fixed; min-height: 50px;
   height: 40px;
   background-position: right;
