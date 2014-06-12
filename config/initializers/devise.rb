@@ -236,14 +236,12 @@ Devise.setup do |config|
 
     config.omniauth :facebook, ENV['FACEBOOK_KEY'], ENV['FACEBOOK_SECRET']
 
-    require 'omniauth-google-oauth2'
     config.omniauth :google_oauth2, ENV['GOOGLE_KEY'], ENV['GOOGLE_SECRET'], { access_type: "offline", approval_prompt: "" }
 
   elsif Rails.env.development?
 
     config.omniauth :facebook, ENV['TEST_FACEBOOK_KEY'], ENV['TEST_FACEBOOK_SECRET']
 
-    require 'omniauth-google-oauth2'
     config.omniauth :google_oauth2, ENV['TEST_GOOGLE_KEY'], ENV['TEST_GOOGLE_SECRET'], { access_type: "offline", approval_prompt: "" }
 
   end
