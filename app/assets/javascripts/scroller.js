@@ -27,31 +27,33 @@ BlogApp.insertScrollBreakSection = function(category){
   $('#scroll-section').append(scrollbreak_html);
 };
 
-BlogApp.appendTop8 = function(topCategories){
-
+BlogApp.appendTop = function(topCategories){
   for(var i = 0; i < topCategories.length; i++){
     BlogApp.insertScrollBreakSection(topCategories[i]);
     BlogApp.insertCategorySection(BlogApp.getTop4Posts(topCategories[i]), i);
   }
 };
 
+BlogApp.hasPosts = function(category){
+  return category.posts.length > 0;
+};
+
 BlogApp.calculateTop8 = function(categories){
   categories.sort(function (a, b) {
     if (a.category_score < b.category_score){
-      return 1;
+        return 1;
     } else if (a.category_score > b.category_score){
       return -1;
     } else {
       return 0;
     }
   });
-  if(categories.length > 8){
-    categories.length = 8;
-    BlogApp.appendTop8(categories);
-
-  } else if(categories.length < 0){
-    BlogApp.appendTop8(categories);
+  var count = 5;
+  while(!BlogApp.hasPosts(categories[count])){
+    count--;
   }
+  categories.length = count;
+  BlogApp.appendTop(categories);
 };
 
 BlogApp.getTop4Posts = function(category){
