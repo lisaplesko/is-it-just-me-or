@@ -28,6 +28,7 @@ BlogApp.insertScrollBreakSection = function(category){
 };
 
 BlogApp.appendTop8 = function(topCategories){
+
   for(var i = 0; i < topCategories.length; i++){
     BlogApp.insertScrollBreakSection(topCategories[i]);
     BlogApp.insertCategorySection(BlogApp.getTop4Posts(topCategories[i]), i);
@@ -44,8 +45,13 @@ BlogApp.calculateTop8 = function(categories){
       return 0;
     }
   });
-  categories.length = 8;
-  BlogApp.appendTop8(categories);
+  if(categories.length > 8){
+    categories.length = 8;
+    BlogApp.appendTop8(categories);
+
+  } else if(categories.length < 0){
+    BlogApp.appendTop8(categories);
+  }
 };
 
 BlogApp.getTop4Posts = function(category){
