@@ -25,4 +25,5 @@ gem 'bootstrap-sass'
 gem 'handlebars_assets'
 gem "paperclip", github: 'thoughtbot/paperclip'
 gem 'aws-sdk'
+gem 'rails_12factor'
 
