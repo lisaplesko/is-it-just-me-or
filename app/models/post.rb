@@ -49,7 +49,7 @@ class Post < ActiveRecord::Base
     word_count = self.body.split(' ').count
     if(word_count > 200)
       minutes = word_count / 200
-      seconds = (word_count % 200) / (200.0 / 60.0)
+      seconds = (word_count % 200) / (200.0 / 60.0).round
       "#{minutes} Minutes #{seconds} Seconds"
     else
       seconds = ((word_count % 200) / (200.0 / 60.0)).round
