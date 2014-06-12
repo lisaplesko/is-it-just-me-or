@@ -1,8 +1,7 @@
 Handlebars.registerHelper('link', function(text, url) {
-  text = Handlebars.Utils.escapeExpression(text);
-  url  = Handlebars.Utils.escapeExpression(url);
-
-  var result = '<a href="' + url + '">' + text + '</a>';
+  var newText = Handlebars.Utils.escapeExpression(text),
+      newUrl  = Handlebars.Utils.escapeExpression(url),
+      result = '<a href="' + newUrl + '">' + newText + '</a>';
 
   return new Handlebars.SafeString(result);
 });
