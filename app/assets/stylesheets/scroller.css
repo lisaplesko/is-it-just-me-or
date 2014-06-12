@@ -21,8 +21,8 @@
   margin-bottom: -4em;
 }
 
-#home-index {
-  background: url(http://floydsproduce.com/blog/wp-content/uploads/2013/03/Wood-Texture-wood-texture-1920x1080-1.jpg) 50% 0 repeat fixed !important;
+.home.index {
+  background: url(http://floydsproduce.com/blog/wp-content/uploads/2013/03/Wood-Texture-wood-texture-1920x1080-1.jpg) 50% 0 fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
