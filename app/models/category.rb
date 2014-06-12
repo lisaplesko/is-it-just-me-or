@@ -23,12 +23,14 @@ class Category < ActiveRecord::Base
     end
 
     def rank_category(category)
-    # Algorithm code for ranking category
-      total_score = 0
-      category.posts.each do |post|
-        total_score += post.rank_post(post)
+      Rails.cache.fetch([:category_rank, category], expires_in: 1.minute) do
+      # Algorithm code for ranking category
+        total_score = 0
+        category.posts.each do |post|
+          total_score += post.rank_post(post)
+        end
+        total_score
       end
-      total_score
     end
 
 end

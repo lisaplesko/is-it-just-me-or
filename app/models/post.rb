@@ -38,14 +38,16 @@ class Post < ActiveRecord::Base
   end
 
   def rank_post(post)
-    # Algorithm code for ranking posts
-    num_views = post.view_counter
-    num_comments = post.comments.count
-    modifier = 500
-    if(num_views > 0)
-      return num_views + num_comments + (num_comments/num_views * modifier)
-    else
-      return 0
+    Rails.cache.fetch([:post_rank, post], expires_in: 1.minute) do
+      # Algorithm code for ranking posts
+      num_views = post.view_counter
+      num_comments = post.comments_count
+      modifier = 500
+      if(num_views > 0)
+        return num_views + num_comments + (num_comments/num_views * modifier)
+      else
+        return 0
+      end
     end
   end
 

@@ -4,7 +4,8 @@ class CategoriesController < ApplicationController
   # GET /categories
   # GET /categories.json
   def index
-    @categories = Category.all
+    # Better, still need more counter caching
+    @categories = Category.includes(posts: [:user]).all
   end
 
   # GET /categories/1
