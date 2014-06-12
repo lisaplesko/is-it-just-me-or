@@ -1,5 +1,7 @@
+var BlogApp = BlogApp || {}
+
 $(document).ready(function() {
-  var header = new Headroom(document.querySelector(".navbar-fixed-top"), {
+  BlogApp.header = new Headroom(document.querySelector(".navbar-fixed-top"), {
     tolerance: 10,
     offset : 200,
     classes: {
@@ -8,5 +10,5 @@ $(document).ready(function() {
       unpinned: "slideUp"
     }
   });
-  header.init();
+  BlogApp.header.init();
 });
