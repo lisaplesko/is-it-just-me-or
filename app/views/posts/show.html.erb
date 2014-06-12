@@ -3,7 +3,6 @@
 
   <div class="post-container" >
   <% @post.increment_counter %>
-  <%= @post.view_counter %>
 
     <% if @post.user == current_user %>
     <%= render 'settings' %>

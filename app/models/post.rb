@@ -16,4 +16,16 @@ class Post < ActiveRecord::Base
     self.save
   end
 
+  def rank_post(post)
+    # Algorithm code for ranking posts
+    num_views = post.view_counter
+    num_comments = post.comments.count
+    modifier = 500
+    if(num_views > 0)
+      return num_views + num_comments + (num_comments/num_views * modifier)
+    else
+      return 0
+    end
+  end
+
 end
