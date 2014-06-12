@@ -42,7 +42,7 @@ class Post < ActiveRecord::Base
     word_count = self.body.split(' ').count
     minutes = word_count / 200
     seconds = word_count % 200 / (200.0 / 60.0)
-    (minutes * 60) + seconds
+    ((minutes * 60) + seconds).round
   end
 
   def time_to_s
