@@ -2,8 +2,8 @@ var BlogApp = BlogApp || {};
 
 $(document).ready(function() {
   BlogApp.header = new Headroom(document.querySelector(".navbar-fixed-top"), {
-    tolerance: 10,
-    offset : 200,
+    tolerance: 1,
+    offset : 100,
     classes: {
       initial: "animated",
       pinned: "slideDown",
