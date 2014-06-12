@@ -2,11 +2,14 @@
   <article><blockquote class='blockquote'>
     <div class='text-in-post'>
       <div class='row'>
-        <div class='col-md-9'>
+        <div class='col-md-8'>
           <h4><a href="{{this.url}}">{{this.title}}</a></h4>
         </div>
-        <div class='col-md-3'>
-          <h5>({{this.view_counter}} views)</h5>
+        <div class='col-md-2'>
+          <h5>({{this.view_counter}} views - {{this.comments.count}} comments)</h5>
+        </div>
+        <div class='col-md-2'>
+          <h5>({{this.time_to_s}})</h5>
         </div>
       </div>
       <div class='row'>
