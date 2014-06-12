@@ -1,3 +1,41 @@
-<%= render 'edit_post' %>
+<div class="container">
+  <%= render 'photo_header' %>
 
-<%= link_to '< Back', post_path(@post), class: "outline-button", role: "button"  %>
+  <div class="post-container" >
+
+    <div class="status"></div>
+    <div id="new-post-form">
+      <%= form_for @post, html: { multipart: true } do |f| %>
+        <%= f.text_area :title,
+                        placeholder: "title", class: "title-input-field" %>
+
+        <%= f.hidden_field :body %>
+
+        <div class="post-body editable" id="editor" contentEditable='true' data-placeholder='Is it just me, or...'>
+          <% unless @post.body.nil? %>
+            <%= @post.body.html_safe %>
+          <% end %>
+        </div>
+
+        <%= f.select :category_id, @category_options.sort, { :prompt => "Select a category" } , { class: "dropdown-select" } %>
+
+        <hr>
+
+        <div class="field">
+          <%= f.label :image %><br />
+          <%= f.file_field :image %>
+        </div>
+
+        <hr>
+
+        <div class="post-buttons">
+          <%= link_to '< Back', post_path(@post), class: "outline-button", role: "button"  %>
+          <% if @post.user == current_user %>
+            <%= link_to 'Delete this post', @post, method: :delete, data: { confirm: 'Are you sure?' }, class: "outline-button" %>
+          <% end %>
+          <%= f.submit 'Publish', class: "outline-button"  %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
