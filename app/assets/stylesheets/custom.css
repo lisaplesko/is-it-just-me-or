@@ -67,8 +67,7 @@ button:focus {
   background-image: url("http://i.imgur.com/pmnMgqX.png");
 }
 
-
-body.login-page {
+.sessions.new {
  background: url('http://www.jodihelmer.com/wordpress/wp-content/uploads/2014/01/desk-and-typewriter.jpg') no-repeat center center fixed;
  -webkit-background-size: cover;
  -moz-background-size: cover;
@@ -76,6 +75,9 @@ body.login-page {
  background-size: cover;
 }
 
+.sessions.new a {
+  color: white;
+}
 
 .panel-default {
  opacity: 0.9;
