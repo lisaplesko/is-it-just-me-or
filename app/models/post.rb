@@ -29,8 +29,12 @@ class Post < ActiveRecord::Base
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
   def increment_counter
-    self.view_counter += 1
-    self.save
+    # gets rid of this bad query:
+    # UPDATE "posts" SET "updated_at" = $1, "view_counter" = $2 WHERE "posts"."id" = 154  [["updated_at", "2014-06-12 19:09:10.178846"], ["view_counter", 11]]
+
+    # Now better:
+    # UPDATE "posts" SET "view_counter" = COALESCE("view_counter", 0) + 1 WHERE "posts"."id" = 154
+    Post.increment_counter :view_counter, self.id
   end
 
   def rank_post(post)
