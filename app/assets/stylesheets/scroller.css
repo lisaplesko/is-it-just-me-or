@@ -10,6 +10,8 @@
   /*http://gadgets.boingboing.net/gimages/eoodkeyboard.jpg*/
   /*http://i0.wp.com/theultralinx.com/wp-content/uploads/2013/09/Oree-Board-Wooden-Keyboard-3.jpeg*/
   /*http://www.wildtextures.com/wp-content/uploads/2011/11/wildtextures-dark-wood-board.jpg*/
+  /*http://designcalorie.com/wp-content/uploads/2013/03/Tea-Stained-Paper-640x320.jpg*/
+  /*http://brent-baldwin.com/wp-content/uploads/2013/01/typewriter_hammers2.jpg*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -19,26 +21,22 @@
   margin-bottom: -4em;
 }
 
-#scroll-section a:link, a:visited, a:active {
-  color: #aaaaaa;
-}
-
-#scroll-section a:hover {
-  color: #aaaaaa;
-}
-
-#category-name a:link, a:visited, a:active {
-  color: black;
+ a {
+  color: white !important;
 }
 
 .scrollback {
-  background: url(http://floydsproduce.com/blog/wp-content/uploads/2013/03/Wood-Texture-wood-texture-1920x1080-1.jpg) 50% 0 repeat fixed;
+  background: url(http://brent-baldwin.com/wp-content/uploads/2013/01/typewriter_hammers2.jpg) 50% repeat fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   height: auto;
   margin: 0 auto;
-  width: 50%;
+  width: 75%;
   max-width: 1920px;
   position: relative;
   text-align: center;
+  box-shadow: 7px 7px 35px #000000
 }
 
 .scrollbreak span {
@@ -46,37 +44,35 @@
 }
 
 .scrollbreak {
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
+  border: 0px solid;
+  border-radius: 25px;
   background: url(http://aveyotech.com/wp-content/uploads/2014/03/brushed-aluminum.jpg)  0 repeat fixed; min-height: 50px;
   height: 40px;
   background-position: right;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  width: 50%;
+  width: 75%;
   margin: 0 auto;
   max-width: 1920px;
   position: relative;
-  -webkit-box-shadow: 0 0 50px rgba(0,0,0,0.8);
-  box-shadow: 0 0 50px rgba(0,0,0,0.8);
-  color: white;
+  -webkit-box-shadow: 0 0 75px rgba(0,0,0,0.8);
+/*  box-shadow: 0 0 75px rgba(0,0,0,0.8);
+*/
   text-align: center;
   font-size: 20px;
   font-weight: bolder;
 }
 
-.scrollbreak a:link, a:visited, a:active {
+.scrollbreak a:link, a:visited, a:active, a:hover {
+  color: white !important;
   position: float;
-/*background: url(http://floydsproduce.com/blog/wp-content/uploads/2013/03/Wood-Texture-wood-texture-1920x1080-1.jpg) 50% 0 repeat fixed;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;*/
+  background: url(http://floydsproduce.com/blog/wp-content/uploads/2013/03/Wood-Texture-wood-texture-1920x1080-1.jpg) 50% 0 repeat fixed;
+  -webkit-background-clip: text;
+/*-webkit-text-fill-color: transparent;*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  -webkit-stroke-width: 5.3px;
-  -webkit-stroke-color: #FFFFFF;
-  -webkit-fill-color: #FFFFFF;
   text-shadow: 3px 3px 80px black;
   -webkit-transition: width 0.3s; /*Safari & Chrome*/
   transition: width 0.3s;
@@ -105,35 +101,22 @@
   -o-transition: width 0.3s; /* Opera */
 }
 
+h5 {
+  margin-top: 26px !important;
+}
+
 .single-post {
   margin: -20px 0 0 0;
   text-align: left;
 }
 
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #000;
-  margin: 1em 0;
-  padding: 0;
-  border-color: white;
-  background-color: white;
-  color: white;
-}
-
-.container hr {
-margin: 2px 0;
-}
-
 .text-in-post {
   color: white;
-
 }
 
 blockquote {
   margin-left: 25px;
-  margin-top: 25px;
+  margin-top: 30px;
   margin-bottom: 0;
   background: rgba(0, 0, 0, 0.5);
 }
