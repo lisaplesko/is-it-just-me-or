@@ -22,13 +22,14 @@
 }
 
 .cat-button a:hover {
-  color: aaaaaa;
+  color: aaaaaa !important;
 }
 
 .cat-button a:link,
 .cat-button a:visited,
 .cat-button a:active {
-  color: black;
+  background: black !important;
+  color: white !important;
 }
 
 .categories.index {
