@@ -4,7 +4,11 @@ class PostsController < ApplicationController
 
   def index
     if params[:user_id].nil?
-      @posts = Post.all
+      if user_signed_in?
+        @posts = User.find(user: current_user).posts
+      else
+        @posts = Post.all
+      end
     else
       @posts = User.find(params[:user_id]).posts
     end
