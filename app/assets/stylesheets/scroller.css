@@ -21,13 +21,13 @@
   margin-bottom: -4em;
 }
 
-#cat-button a:hover {
+.btn-default a:hover {
   color: aaaaaa !important;
 }
 
-#cat-button a:link,
-#cat-button a:visited,
-#cat-button a:active {
+.btn-default a:link,
+.btn-default a:visited,
+.btn-default a:active {
   background: black !important;
   color: white !important;
 }
