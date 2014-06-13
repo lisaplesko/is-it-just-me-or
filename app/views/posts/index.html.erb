@@ -6,7 +6,11 @@
   </div>
   <div class='row'>
     <div class='col-md-3'>
-      <div class="profile-pic-container"><img class='profile-pic' src=<%= @posts.first.user.profile_url %> /></div>
+      <div class="profile-pic-container">
+      <% if !@posts.nil? %>
+        <img class='profile-pic' src=<%= @posts.first.user.profile_url %> />
+      <% end %>
+      </div>
     </div>
     <div class='col-md-7'>
       <div id='blog-title'>
