@@ -21,6 +21,16 @@
   margin-bottom: -4em;
 }
 
+.cat-button a:hover {
+  color: aaaaaa;
+}
+
+.cat-button a:link,
+.cat-button a:visited,
+.cat-button a:active {
+  color: black;
+}
+
 .categories.index {
   background: url(http://floydsproduce.com/blog/wp-content/uploads/2013/03/Wood-Texture-wood-texture-1920x1080-1.jpg) 50% 0 fixed;
   -webkit-background-size: cover;
