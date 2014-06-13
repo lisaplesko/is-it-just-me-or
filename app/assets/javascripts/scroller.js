@@ -48,7 +48,7 @@ BlogApp.calculateTop8 = function(categories){
       return 0;
     }
   });
-  var count = 5;
+  var count = 20;
   while(!BlogApp.hasPosts(categories[count])){
     count--;
   }
