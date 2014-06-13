@@ -28,6 +28,10 @@
 .btn-default a:link,
 .btn-default a:visited,
 .btn-default a:active {
+  color: white;
+}
+
+.btn-default {
   background: black !important;
   color: white !important;
 }
