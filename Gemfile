@@ -15,6 +15,7 @@ gem 'spring',        group: :development
 # Added gems
 gem 'pry-rails', group: :development
 gem 'pry-nav', group: :development
+gem 'rspec-rails', group: :development
 gem 'devise'
 gem 'dotenv-rails'
 gem 'omniauth-facebook'
@@ -27,7 +28,7 @@ gem 'handlebars_assets'
 gem "paperclip", github: 'thoughtbot/paperclip'
 gem 'aws-sdk'
 gem 'rails_12factor', group: :production
-gem "bullet", group: "development"
+gem "bullet", group: :development
 gem 'counter_culture', '~> 0.1.18'
 gem 'redis-rails'
 gem 'redis-rack-cache'
