@@ -11,6 +11,7 @@
 <script src="//cdn.jsdelivr.net/headroomjs/0.5.0/headroom.min.js"></script>
 <script src="//cdn.jsdelivr.net/headroomjs/0.5.0/angular.headroom.min.js"></script>
 <script src="//cdn.jsdelivr.net/headroomjs/0.5.0/jQuery.headroom.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
@@ -54,13 +55,9 @@
             <% if user_signed_in? %>
               <ul class="nav navbar-nav">
                 <li><%= link_to "Logout", destroy_user_session_path %></li>
-              </ul>
-              <div>
-                <div class="mini-profile-pic-container"><img class='mini-profile-pic' src=<%= current_user.profile_url %> /></div>
-              </div>
-              <ul class='nav navbar-nav pull-right'>
                 <li><%= link_to 'New Post', new_user_post_path(current_user)%></li>
                 <li><%= link_to current_user.first_name, user_posts_path(current_user, class: 'user-name')%></li>
+                <div class="mini-profile-pic-container mini-pic"><img class='mini-profile-pic' src=<%= current_user.profile_url %> /></div>
               </ul>
             <% else %>
               <ul class='nav navbar-nav pull-left'>
