@@ -62,6 +62,12 @@ h4{
   font-family: 'Source Sans Pro', sans-serif;
   text-align: center;
 }
+.post a,
+.post a:visited,
+.post a:hover {
+  color: black !important;
+  text-shadow: none;
+}
 .new-post{
   margin-top: 20px;
   margin-left: 40px;
