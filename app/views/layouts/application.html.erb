@@ -54,13 +54,14 @@
               <ul class="nav navbar-nav">
                 <li><%= link_to "Logout", destroy_user_session_path %></li>
                 <li><%= link_to 'New Post', new_user_post_path(current_user)%></li>
+                <li><%= link_to 'Categories', categories_path %></li>
                 <li><%= link_to current_user.first_name, user_posts_path(current_user)%></li>
                 <div class="mini-profile-pic-container mini-pic"><img class='mini-profile-pic' src=<%= current_user.profile_url %> /></div>
               </ul>
             <% else %>
-              <ul class='nav navbar-nav pull-left'>
-                <li><%= link_to "Login", new_user_session_path %></li>
-              </ul>
+              <!--ul class='nav navbar-nav pull-left'>
+                <li>< link_to "Login", new_user_session_path ></li>
+              </ul -->
             <% end %>
           </div>
         </div>
