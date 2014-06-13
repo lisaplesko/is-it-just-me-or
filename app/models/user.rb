@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
       user.first_name = auth.info.first_name
       user.profile_url = (auth.info.image + "?type=large")
       user.email = auth.info.email
+      user.name = auth.info.name
     end
   end
 
