@@ -66,8 +66,8 @@ BlogApp.getTop4Posts = function(category){
       return 0;
     }
   });
-  if(top4Posts.length > 4){
-    top4Posts.length = 4;
+  if(top4Posts.length > 5){
+    top4Posts.length = 5;
   }
   return top4Posts;
 };
