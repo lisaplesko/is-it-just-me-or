@@ -33,14 +33,14 @@
   height: 100%;
 }
 
-/*.-header {
+.home-header {
   padding: 35px !important;
   margin: 0 auto;
   width: 75%;
   text-align: left;
   color: white;
   margin-bottom: 25px;
-}*/
+}
 
  a {
   color: white !important;
