@@ -21,6 +21,8 @@
   margin-bottom: -4em;
 }
 
+
+
 .home.index {
   background: url(http://floydsproduce.com/blog/wp-content/uploads/2013/03/Wood-Texture-wood-texture-1920x1080-1.jpg) 50% 0 fixed;
   -webkit-background-size: cover;
@@ -31,14 +33,14 @@
   height: 100%;
 }
 
-.login-header {
+/*.-header {
   padding: 35px !important;
   margin: 0 auto;
   width: 75%;
   text-align: left;
   color: white;
   margin-bottom: 25px;
-}
+}*/
 
  a {
   color: white !important;
@@ -83,7 +85,7 @@
   font-weight: bolder;
 }
 
-.scrollbreak a:link, a:visited, a:active, a:hover {
+.scrollbreak a:link, a:visited, a:active {
   color: white !important;
   position: float;
   background: url(http://floydsproduce.com/blog/wp-content/uploads/2013/03/Wood-Texture-wood-texture-1920x1080-1.jpg) 50% 0 repeat fixed;
