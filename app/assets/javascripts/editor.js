@@ -16,32 +16,10 @@ BlogApp.doneTyping = function() {
 };
 
 BlogApp.putCursorBack = function(){
-  //input is the input element
-
   $('#editor').focus(); //sets focus to element
   var val = this.input.value; //store the value of the element
   this.input.value = ''; //clear the value of the element
   this.input.value = val; //set that value back.
-
-  // caretPos = 100000000000000000000;
-  // var elem = document.getElementById('#editor');
-
-  // if(elem !== null) {
-  //   if(elem.createTextRange) {
-  //     var range = elem.createTextRange();
-  //     range.move('character', caretPos);
-  //     range.select();
-  //   }
-  //   else {
-  //     if(elem.selectionStart) {
-  //       elem.focus();
-  //       elem.setSelectionRange(caretPos, caretPos);
-  //     }
-  //     else {
-  //       elem.focus();
-  //     }
-  //   }
-  // }
 };
 
 BlogApp.saveToForm = function() {

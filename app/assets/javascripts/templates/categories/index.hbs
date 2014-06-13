@@ -7,7 +7,7 @@
     <section class="scrollback" id='{{this.post.id}}' data-type="background" data-speed="10">
     <article><blockquote class='blockquote'>
     {{this.posts.title}}, '{{this.url}}' - {{this.post.view_counter}}
-    <ul class='list-unstyled'><%= {{this.post.body_summary}} %></ul>
+    <ul class='list-unstyled'><%= {{{this.post.body_summary}}} %></ul>
     <footer><%= link_to 'Post Author', posts_path({{this.post.user}}) %></footer>
     </blockquote>
     </article>
