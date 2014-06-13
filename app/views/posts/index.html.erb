@@ -16,7 +16,7 @@
           <div class='post' id=<%=post.id%>>
             <h4><%= link_to post.title, post_path(post), class: 'post-title' %></h4>
             <div class='body-text'>
-              <p><%= post.body %></p>
+              <p><%= post.body.html_safe %></p>
             </div>
           </div>
         <% end %>

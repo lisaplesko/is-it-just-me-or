@@ -42,7 +42,7 @@
   margin-bottom: 25px;
 }
 
- a {
+a {
   color: white !important;
 }
 
@@ -85,7 +85,11 @@
   font-weight: bolder;
 }
 
-.scrollbreak a:link, a:visited, a:active {
+
+.scrollbreak a:link,
+.scrollbreak a:visited,
+.scrollbreak a:active,
+.scrollbreak a:hover {
   color: white !important;
   position: float;
   background: url(http://floydsproduce.com/blog/wp-content/uploads/2013/03/Wood-Texture-wood-texture-1920x1080-1.jpg) 50% 0 repeat fixed;
