@@ -13,13 +13,13 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 # Added gems
-gem 'pry-rails'
-gem 'pry-nav'
+gem 'pry-rails', group: :development
+gem 'pry-nav', group: :development
 gem 'devise'
 gem 'dotenv-rails'
 gem 'omniauth-facebook'
 gem "omniauth-google-oauth2"
-gem 'faker'
+gem 'faker', group: :development
 gem 'medium-editor-rails'
 gem 'active_model_serializers'
 gem 'bootstrap-sass'

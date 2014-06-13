@@ -1,6 +1,6 @@
 var BlogApp = BlogApp || {};
 
-$('.home.index').ready(function(){
+$('.categories.index').ready(function(){
 
   $('#scroll-section').scroll(BlogApp.updateText);
 
