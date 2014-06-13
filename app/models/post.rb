@@ -13,10 +13,6 @@ class Post < ActiveRecord::Base
 
   delegate :name, :profile_url, to: :user, prefix: true, allow_nil: true
 
-  # def pluralize
-  #   ActiveSupport::Inflector.pluralize(self)
-  # end
-
   def self.count_comments
     self.comments.count
   end
