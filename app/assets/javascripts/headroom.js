@@ -11,4 +11,5 @@ $(document).ready(function() {
     }
   });
   BlogApp.header.init();
+  $('.collapse').collapse();
 });
