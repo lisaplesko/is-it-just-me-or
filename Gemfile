@@ -18,16 +18,16 @@ gem 'pry-nav', group: :development
 gem 'devise'
 gem 'dotenv-rails'
 gem 'omniauth-facebook'
-gem "omniauth-google-oauth2"
+gem 'omniauth-google-oauth2'
 gem 'faker', group: :development
 gem 'medium-editor-rails'
 gem 'active_model_serializers'
 gem 'bootstrap-sass'
 gem 'handlebars_assets'
-gem "paperclip", github: 'thoughtbot/paperclip'
+gem 'paperclip', github: 'thoughtbot/paperclip'
 gem 'aws-sdk'
 gem 'rails_12factor', group: :production
-gem "bullet", group: "development"
+gem 'bullet', group: "development"
 gem 'counter_culture', '~> 0.1.18'
 gem 'redis-rails'
 gem 'redis-rack-cache'

@@ -1,6 +1,4 @@
 class Post < ActiveRecord::Base
-# require 'active_support/inflector'
-# require 'active_support/core_ext/string'
   has_many :comments
   belongs_to :user
   belongs_to :category
