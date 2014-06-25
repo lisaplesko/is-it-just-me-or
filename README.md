@@ -47,4 +47,4 @@ To begin, run `bundle install`
 
 
 Thank you!
-Developed by: Ethan Gould, Mike Talley, Lisa Plesko
+Developed by: @EthanGould, @MikeTalley, @LisaPlesko
