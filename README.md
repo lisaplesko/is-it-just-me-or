@@ -47,4 +47,4 @@ To begin, run `bundle install`
 
 
 Thank you!
-Developed by: @EthanGould, @MikeTalley, @LisaPlesko
+Developed by: [Ethan Gould](https://github.com/ethangould), [Mike Talley](https://github.com/miketalley), [Lisa Plesko](https://github.com/lisaplesko)
